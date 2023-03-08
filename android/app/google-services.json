@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "412277346962",
+    "project_id": "emaillogin-751da",
+    "storage_bucket": "emaillogin-751da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412277346962:android:6f58975e65fc8c35218c4b",
+        "android_client_info": {
+          "package_name": "com.example.project_intern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412277346962-9qh6n14dsm81bkg51f161cnnfhqto261.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC63tp4zqOM6-KpTty14s0N6N4pAEQjYxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412277346962-9qh6n14dsm81bkg51f161cnnfhqto261.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
