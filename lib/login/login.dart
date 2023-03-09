@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:project_intern/home/home.dart';
 import 'package:project_intern/login/signup.dart';
+import 'package:project_intern/view/intro%20app/splashscreen.dart';
 
 class loginPage extends StatefulWidget{
   @override
@@ -192,7 +192,7 @@ class _loginPageState extends State<loginPage> {
   }
 
   Widget gotoHome(BuildContext context){
-    return HomePage();
+    return SplashScreenIntro();
   }
 
   Widget gotoSignUpPage(BuildContext context){
@@ -203,7 +203,7 @@ class _loginPageState extends State<loginPage> {
     await _auth.signInWithEmailAndPassword(email: email, password: password)
         .then((uid) => {
           Fluttertoast.showToast(msg: "Login successful"),
-          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (conext) => HomePage()))
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (conext) => SplashScreenIntro()))
     }).catchError((e){
         Fluttertoast.showToast(msg: e!.message);
     });

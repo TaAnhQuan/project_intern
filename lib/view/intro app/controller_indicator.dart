@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:prokect_intern/view/intro app/indicator_page1.dart';
-import 'package:prokect_intern/view/intro app/indicator_page2.dart';
-import 'package:prokect_intern/view/intro app/indicator_page3.dart';
+import 'package:project_intern/view/intro app/indicator_page1.dart';
+import 'package:project_intern/view/intro app/indicator_page2.dart';
+import 'package:project_intern/view/intro app/indicator_page3.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import "package:prokect_intern/view/home_page/home_page.dart";
-import "package:prokect_intern/view/home_page/home_controller.dart";
+import "package:project_intern/view/home_page/home_page.dart";
+import "package:project_intern/view/home_page/home_controller.dart";
 class ControllerIndicator extends StatefulWidget {
    const ControllerIndicator({super.key});
 

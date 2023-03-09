@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import "package:prokect_intern/view/home_page/home_page.dart";
+import "package:project_intern/view/home_page/home_page.dart";
 class HomeControllerPage extends StatefulWidget {
    HomeControllerPage({super.key});
 

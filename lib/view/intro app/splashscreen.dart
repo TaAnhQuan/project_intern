@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:prokect_intern/view/intro app/controller_indicator.dart';
+import 'package:project_intern/view/intro app/controller_indicator.dart';
 class SplashScreenIntro extends StatefulWidget {
   const SplashScreenIntro({super.key});
 

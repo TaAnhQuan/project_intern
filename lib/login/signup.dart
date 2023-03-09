@@ -2,10 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:project_intern/home/home.dart';
 import 'package:project_intern/user/user_account.dart';
-
-import '../db/db-helper.dart';
+import 'package:project_intern/view/intro%20app/splashscreen.dart';
 import 'login.dart';
 
 class signUpPage extends StatefulWidget {
@@ -224,7 +222,7 @@ class _signUpPageState extends State<signUpPage> {
     await _auth.createUserWithEmailAndPassword(email: email, password: password)
         .then((value) => {
           postDetailsToFireStore(),
-          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (conext) => HomePage()))
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (conext) => SplashScreenIntro()))
     }).catchError((e){
       Fluttertoast.showToast(msg: e!.message);
     });
@@ -250,7 +248,7 @@ class _signUpPageState extends State<signUpPage> {
         .set(useracc.toMap());
 
      Fluttertoast.showToast(msg: "Account created successfully :) ");
-     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (conext) => HomePage()));
+     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (conext) => SplashScreenIntro()));
   }
 
 }

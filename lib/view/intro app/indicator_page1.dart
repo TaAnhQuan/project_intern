@@ -1,6 +1,6 @@
-import 'package:prokect_intern/view/intro app/indicator_page1.dart';
+import 'package:project_intern/view/intro app/indicator_page1.dart';
 import 'package:flutter/material.dart';
-import "package:prokect_intern/view/home_page/home_page.dart";
+import "package:project_intern/view/home_page/home_page.dart";
 class Indicatoe_page1 extends StatelessWidget {
   const Indicatoe_page1({super.key});
 

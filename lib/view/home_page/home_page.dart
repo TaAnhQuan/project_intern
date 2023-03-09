@@ -9,8 +9,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePage extends State<HomePage> {
   
-
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +16,6 @@ class _HomePage extends State<HomePage> {
       body:Center(
         child: Container(
           color: Colors.amber[100],
-
         ),
         
       ),
