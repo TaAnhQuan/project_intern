@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 import 'custom_search_delegate.dart';
 
 
-class SearchPage extends StatefulWidget {
+class SearchPage extends StatefulWidget with PreferredSizeWidget{
   const SearchPage({Key? key}) : super(key: key);
 
   @override
   State<SearchPage> createState() => _SearchPageState();
+
+  @override
+  Size get preferredSize => const Size.fromHeight(100);
 }
 
 class _SearchPageState extends State<SearchPage> {
@@ -18,9 +21,8 @@ class _SearchPageState extends State<SearchPage> {
     double _screenHeight = MediaQuery.of(context).size.height;
     double _screenWidth = MediaQuery.of(context).size.width;
 
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
+    return AppBar(
+        backgroundColor: Colors.amber[100],
         elevation: 0,
         toolbarOpacity: 1,
         title: Text('Search', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),),
@@ -33,11 +35,6 @@ class _SearchPageState extends State<SearchPage> {
               },
               icon: const Icon(Icons.search), color: Colors.black)
         ],
-      ),
-
-      body: Container(
-        color: Colors.white,
-      ),
-    );
+      );
   }
 }
