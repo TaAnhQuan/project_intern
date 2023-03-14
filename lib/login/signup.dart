@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:project_intern/user/user_account.dart';
-import 'package:project_intern/view/intro%20app/splashscreen.dart';
+import 'package:project_intern/view/intro_app/splashscreen.dart';
 import 'login.dart';
 
 class signUpPage extends StatefulWidget {

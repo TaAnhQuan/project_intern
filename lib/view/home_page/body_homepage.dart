@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_intern/view/homepage/search_textfield_bodyhomepage.dart';
+import 'package:project_intern/view/home_page/search_textfield_bodyhomepage.dart';
 import '../../sizeconfig.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project_intern/view/categories/categories_01.dart';
@@ -108,7 +108,7 @@ class _BodyHomePageState extends State<BodyHomePage>  with TickerProviderStateMi
               ),
             ),
             Container(
-              height: SizeConfig.screenHeight-300,
+              height: SizeConfig.screenHeight,
               width: SizeConfig.screenWidth,
               decoration: BoxDecoration(
                 color: Colors.grey,

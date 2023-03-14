@@ -1,4 +1,4 @@
-import 'package:project_intern/view/intro app/indicator_page1.dart';
+import 'package:project_intern/view/intro_app/indicator_page1.dart';
 import 'package:flutter/material.dart';
 class Indicatoe_page3 extends StatelessWidget {
   const Indicatoe_page3({super.key});

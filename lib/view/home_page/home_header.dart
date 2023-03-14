@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:project_intern/view/homepage/search_textfield_bodyhomepage.dart';
+import 'package:project_intern/view/home_page/search_textfield_bodyhomepage.dart';
 
 import '../../sizeconfig.dart';
 import 'icon_btn_withcounter.dart';

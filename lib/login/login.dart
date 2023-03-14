@@ -2,7 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:project_intern/login/signup.dart';
-import 'package:project_intern/view/intro%20app/splashscreen.dart';
+
+import '../view/intro_app/splashscreen.dart';
 
 class loginPage extends StatefulWidget{
   @override
