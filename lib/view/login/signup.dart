@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:project_intern/user/user_account.dart';
+import 'package:project_intern/model/user_account.dart';
 import 'package:project_intern/view/intro_app/splashscreen.dart';
 import 'login.dart';
 
