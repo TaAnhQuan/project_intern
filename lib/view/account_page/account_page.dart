@@ -35,18 +35,18 @@ class AccountPage extends StatelessWidget {
             ),
 
             /** username text box */
-            Center(
+            const Center(
               child: Text('Username', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
             ),
 
             /** box part (unknown function) */
             Container(
-              margin: EdgeInsets.fromLTRB(50, 20, 5, 10),
+              margin: const EdgeInsets.fromLTRB(50, 20, 5, 10),
               width: screenWidth * 0.8,
               height: 150,
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.blueAccent),
-                  borderRadius: BorderRadius.all(Radius.circular(20))
+                  borderRadius: const BorderRadius.all(Radius.circular(20))
               ),
               child: Row(
                 children: [
@@ -57,7 +57,7 @@ class AccountPage extends StatelessWidget {
 
                       /** Container for wallet image button*/
                       Container(
-                          margin: EdgeInsets.fromLTRB(10, 30, 10, 5),
+                          margin: const EdgeInsets.fromLTRB(10, 30, 10, 5),
                           width: 55,
                           height: 55,
                           child: IconButton(
@@ -67,7 +67,7 @@ class AccountPage extends StatelessWidget {
 
                       /** Container for wallet text */
                       Container(
-                        margin: EdgeInsets.fromLTRB(15, 0, 10, 10),
+                        margin: const EdgeInsets.fromLTRB(15, 0, 10, 10),
                         child: const Text('Wallet', style: TextStyle(fontWeight: FontWeight.bold)),
                       ),
                     ],
@@ -79,7 +79,7 @@ class AccountPage extends StatelessWidget {
 
                       /** Container for display shipped image button */
                       Container(
-                          margin: EdgeInsets.fromLTRB(10, 30, 10, 5),
+                          margin: const EdgeInsets.fromLTRB(10, 30, 10, 5),
                           width: 55,
                           height: 55,
                           child: IconButton(
@@ -93,7 +93,7 @@ class AccountPage extends StatelessWidget {
 
                       /** Container for display shipped text */
                       Container(
-                        margin: EdgeInsets.fromLTRB(10, 0, 10, 10),
+                        margin: const EdgeInsets.fromLTRB(10, 0, 10, 10),
                         child: const Text('Shipped', style: TextStyle(fontWeight: FontWeight.bold)),
                       ),
                     ],
@@ -105,7 +105,7 @@ class AccountPage extends StatelessWidget {
 
                       /** Container for display payment image button */
                       Container(
-                          margin: EdgeInsets.fromLTRB(10, 30, 10, 5),
+                          margin: const EdgeInsets.fromLTRB(10, 30, 10, 5),
                           width: 55,
                           height: 55,
                           child: IconButton(
@@ -120,7 +120,7 @@ class AccountPage extends StatelessWidget {
 
                       /** Container for display payment text */
                       Container(
-                        margin: EdgeInsets.fromLTRB(10, 0, 10, 10),
+                        margin: const EdgeInsets.fromLTRB(10, 0, 10, 10),
                         child: const Text('Payment', style: TextStyle(fontWeight: FontWeight.bold)),
                       ),
                     ],
@@ -132,7 +132,7 @@ class AccountPage extends StatelessWidget {
 
                       /** Container for display contact image button */
                       Container(
-                          margin: EdgeInsets.fromLTRB(10, 30, 0, 5),
+                          margin: const EdgeInsets.fromLTRB(10, 30, 0, 5),
                           width: 55,
                           height: 55,
                           child: IconButton(
@@ -142,7 +142,7 @@ class AccountPage extends StatelessWidget {
 
                       /** Container for display contact text */
                       Container(
-                        margin: EdgeInsets.fromLTRB(10, 0, 0, 10),
+                        margin: const EdgeInsets.fromLTRB(10, 0, 0, 10),
                         child: const Text('Contact us', style: TextStyle(fontWeight: FontWeight.bold)),
                       ),
                     ],
@@ -156,10 +156,10 @@ class AccountPage extends StatelessWidget {
               children: [
                 /** setting container */
                 Container(
-                  margin: EdgeInsets.fromLTRB(50, 0, 5, 10),
+                  margin: const EdgeInsets.fromLTRB(50, 0, 5, 10),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade500),
-                      borderRadius: BorderRadius.all(Radius.circular(20))
+                      borderRadius: const BorderRadius.all(Radius.circular(20))
                   ),
                   child: ButtonBar(
                     alignment: MainAxisAlignment.start,
@@ -186,10 +186,10 @@ class AccountPage extends StatelessWidget {
 
                 /** help and support container */
                 Container(
-                  margin: EdgeInsets.fromLTRB(50, 0, 5, 10),
+                  margin: const EdgeInsets.fromLTRB(50, 0, 5, 10),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade500),
-                      borderRadius: BorderRadius.all(Radius.circular(20))
+                      borderRadius: const BorderRadius.all(Radius.circular(20))
                   ),
                   child: ButtonBar(
                     alignment: MainAxisAlignment.start,
@@ -211,19 +211,19 @@ class AccountPage extends StatelessWidget {
 
                 /** faq container */
                 Container(
-                  margin: EdgeInsets.fromLTRB(50, 0, 5, 10),
+                  margin: const EdgeInsets.fromLTRB(50, 0, 5, 10),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade500),
-                      borderRadius: BorderRadius.all(Radius.circular(20))
+                      borderRadius: const BorderRadius.all(Radius.circular(20))
                   ),
                   child: ButtonBar(
                     alignment: MainAxisAlignment.start,
                     children: [
 
-                      Container(
+                      const SizedBox(
                         width: 20,
                           height: 20,
-                          child: const ImageIcon(AssetImage('assets/image/icons/bubble_text.png'))
+                          child: ImageIcon(AssetImage('assets/image/icons/bubble_text.png'))
                       ),
 
                       TextButton(

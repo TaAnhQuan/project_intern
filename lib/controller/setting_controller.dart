@@ -11,14 +11,11 @@ class SettingController{
     if (newPassword == confirmNewPassword && await validateEmailAndPassword(oldPassword)){
       //Pass in the password to updatePassword.
       _user.updatePassword(newPassword).then((_){
-        print("Successfully changed password");
       }).catchError((error){
-        print("Password can't be changed" + error.toString());
         //This might happen, when the wrong password is in, the user isn't found, or if the user hasn't logged in recently.
       });
 
       final db = FirebaseFirestore.instance;
-      print(_user.uid);
       db.collection('users').doc(_user.uid).update({
        'password': newPassword,
       });
@@ -35,7 +32,6 @@ class SettingController{
           .reauthenticateWithCredential(authCredentials);
       return authResult.user != null;
     } catch (e) {
-      print(e);
       return false;
     }
   }
@@ -45,7 +41,6 @@ class SettingController{
         return await _auth.signOut();
       }
       catch(e){
-        print(e.toString());
         return;
       }
   }
@@ -54,14 +49,11 @@ class SettingController{
     if (oldEmail !=  newEmail && await validateEmailAndPassword(password)){
       //Pass in the password to updatePassword.
       _user.updateEmail(newEmail).then((_){
-        print("Successfully changed password");
       }).catchError((error){
-        print("Password can't be changed" + error.toString());
         //This might happen, when the wrong password is in, the user isn't found, or if the user hasn't logged in recently.
       });
 
       final db = FirebaseFirestore.instance;
-      print(_user.uid);
       db.collection('users').doc(_user.uid).update({
         'username': newEmail,
       });

@@ -28,52 +28,50 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
         ),
       ),
 
-      body: Container(
-        child: Column(
-          children: [
-            ButtonBar(
-              children: [
+      body: Column(
+        children: [
+          ButtonBar(
+            children: [
 
-                CircleFlag('us', size: 30,),
+              CircleFlag('us', size: 30,),
 
-                TextButton(
-                    onPressed: (){},
-                    child: SizedBox(
-                        width: screenWidth * 0.8,
-                        child: const Text(
-                            'English',
-                          style: TextStyle(
+              TextButton(
+                  onPressed: (){},
+                  child: SizedBox(
+                      width: screenWidth * 0.8,
+                      child: const Text(
+                          'English',
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ))
+              ),
+            ],
+          ),
+
+          ButtonBar(
+            children: [
+
+              CircleFlag('vn', size: 30,),
+
+              TextButton(
+                  onPressed: (){},
+                  child: SizedBox(
+                      width: screenWidth * 0.8,
+                      child: const Text(
+                        'Vietnamese',
+                        style: TextStyle(
                             fontSize: 25,
                             color: Colors.black,
                             fontWeight: FontWeight.bold
-                          ),
-                        ))
-                ),
-              ],
-            ),
-
-            ButtonBar(
-              children: [
-
-                CircleFlag('vn', size: 30,),
-
-                TextButton(
-                    onPressed: (){},
-                    child: SizedBox(
-                        width: screenWidth * 0.8,
-                        child: const Text(
-                          'Vietnamese',
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold
-                          ),
-                        ))
-                ),
-              ],
-            )
-          ],
-        ),
+                        ),
+                      ))
+              ),
+            ],
+          )
+        ],
       ),
     );
   }

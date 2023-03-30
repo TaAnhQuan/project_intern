@@ -184,7 +184,7 @@ class _SettingPageState extends State<SettingPage> {
                             SettingController().signOut();
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) =>  loginPage())
+                              MaterialPageRoute(builder: (context) =>  const LoginPage())
                             );
                           },
                           child: SizedBox(

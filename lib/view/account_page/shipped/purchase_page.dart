@@ -24,48 +24,44 @@ class _PurchasePageState extends State<PurchasePage> {
         ),
       ),
 
-      body: Container(
-        child: ListView.builder(
-          itemCount: 10,
-            itemBuilder: (BuildContext context, int index){
-              return Container(
-                child: Row(
-                  children: [
-                    Image.asset(
-                        'assets/image/avatar-default.png',
-                      width: 70,
-                      height: 70,
-                    ),
-
-                    Container(
-                      margin: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Item $index', style: const TextStyle(color: Colors.black, fontSize: 20),),
-                          Text('Description for item $index', style: const TextStyle(color: Colors.black, fontSize: 16),),
-                          Text.rich(
-                              TextSpan(
-                                text: 'Number of item: ',
-                                style: const TextStyle(
-                                    color: Colors.black, fontSize: 14, fontStyle: FontStyle.italic),
-                                children: [
-                                  TextSpan(
-                                    text: '$index',
-                                    style: const TextStyle(
-                                        color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),
-                                    )
-                                ]
-                              ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
+      body: ListView.builder(
+        itemCount: 10,
+          itemBuilder: (BuildContext context, int index){
+            return Row(
+              children: [
+                Image.asset(
+                    'assets/image/avatar-default.png',
+                  width: 70,
+                  height: 70,
                 ),
-              );
-            }
-        ),
+
+                Container(
+                  margin: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Item $index', style: const TextStyle(color: Colors.black, fontSize: 20),),
+                      Text('Description for item $index', style: const TextStyle(color: Colors.black, fontSize: 16),),
+                      Text.rich(
+                          TextSpan(
+                            text: 'Number of item: ',
+                            style: const TextStyle(
+                                color: Colors.black, fontSize: 14, fontStyle: FontStyle.italic),
+                            children: [
+                              TextSpan(
+                                text: '$index',
+                                style: const TextStyle(
+                                    color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),
+                                )
+                            ]
+                          ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            );
+          }
       ),
     );
   }

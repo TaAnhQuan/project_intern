@@ -24,17 +24,15 @@ class _AboutUsPageState extends State<AboutUsPage> {
         ),
       ),
 
-      body: Container(
-        child: const Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-            'Suspendisse ac lacinia velit, ac sollicitudin eros. Sed nec eleifend enim. '
-            'Vestibulum vel orci vel mi efficitur varius. '
-            'Nam vitae purus in arcu suscipit pharetra sed non quam. '
-            'Maecenas a ex sed felis efficitur scelerisque ac vel elit. '
-            'Nullam euismod mi non velit efficitur, ut elementum ante pretium. '
-            'Vestibulum ac elit sapien. Nunc tincidunt turpis sed ex aliquam blandit. '
-            'Curabitur ut neque euismod, bibendum neque eget, sollicitudin velit. '
-            'Nulla semper consectetur nunc sed sagittis.'),
-      ),
+      body: const Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+          'Suspendisse ac lacinia velit, ac sollicitudin eros. Sed nec eleifend enim. '
+          'Vestibulum vel orci vel mi efficitur varius. '
+          'Nam vitae purus in arcu suscipit pharetra sed non quam. '
+          'Maecenas a ex sed felis efficitur scelerisque ac vel elit. '
+          'Nullam euismod mi non velit efficitur, ut elementum ante pretium. '
+          'Vestibulum ac elit sapien. Nunc tincidunt turpis sed ex aliquam blandit. '
+          'Curabitur ut neque euismod, bibendum neque eget, sollicitudin velit. '
+          'Nulla semper consectetur nunc sed sagittis.'),
     );
   }
 }

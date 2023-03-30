@@ -1,31 +1,26 @@
-
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:project_intern/controller/login_controller.dart';
 import 'package:project_intern/view/admin/home_page/admin_home_page.dart';
 import 'package:project_intern/view/intro_app/splashscreen.dart';
 import 'package:project_intern/view/login/signup.dart';
 import 'package:project_intern/view/setting/reset_password_page.dart';
-import 'package:project_intern/view/setting/setting_page.dart';
-import '../account_page/account_page.dart';
 
-class loginPage extends StatefulWidget{
-  const loginPage({super.key});
+class LoginPage extends StatefulWidget{
+  const LoginPage({super.key});
 
   @override
-  State<loginPage> createState() => _loginPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _loginPageState extends State<loginPage> {
+class _LoginPageState extends State<LoginPage> {
 
   bool _isObscure = true;
-  TextEditingController _userController = new TextEditingController();
-  TextEditingController _passwordController = new TextEditingController();
-  var _usernameError = 'Email not validate';
-  var _passwordError = 'Password must have at least 6 character';
-  var _userInvalid = false;
-  var _passwordInvalid = false;
+  final TextEditingController _userController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final _usernameError = 'Email not validate';
+  final _passwordError = 'Password must have at least 6 character';
+  final _userInvalid = false;
+  final _passwordInvalid = false;
 
 
 
@@ -65,68 +60,64 @@ class _loginPageState extends State<loginPage> {
                     child: Column(
                       children: <Widget>[
                         Container(
-                          // alignment: AlignmentDirectional.topCenter,
-                            child: Container(
-                              padding: const EdgeInsets.fromLTRB(20, 20, 10, 20),
-                              child: TextFormField(
-                                validator: (value){
-                                  if (value!.isEmpty){
-                                    return ("Please Enter Your Email");
-                                  }
-                                  // reg for email validation
-                                  if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9._]+.[a-z]").hasMatch(value)){
-                                    return ("Please Enter a valid email");
-                                  }
-                                  return null;
-                                },
-                                controller: _userController,
-                                style: const TextStyle(color: Colors.black),
-                                decoration: InputDecoration(
-                                    fillColor: const Color.fromRGBO(255, 255, 255, 0),
-                                    prefixIcon: const Icon(Icons.mail, color: Colors.black),
-                                    filled: true,
-                                    hintText: 'Email',
-                                    hintStyle: const TextStyle(color: Colors.black),
-                                    labelStyle: const TextStyle(color: Colors.black),
-                                    errorText: _userInvalid ? _usernameError : null,
-                                ),
-                              ),
-                            )
+                          padding: const EdgeInsets.fromLTRB(20, 20, 10, 20),
+                          child: TextFormField(
+                            validator: (value){
+                              if (value!.isEmpty){
+                                return ("Please Enter Your Email");
+                              }
+                              // reg for email validation
+                              if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9._]+.[a-z]").hasMatch(value)){
+                                return ("Please Enter a valid email");
+                              }
+                              return null;
+                            },
+                            controller: _userController,
+                            style: const TextStyle(color: Colors.black),
+                            decoration: InputDecoration(
+                                fillColor: const Color.fromRGBO(255, 255, 255, 0),
+                                prefixIcon: const Icon(Icons.mail, color: Colors.black),
+                                filled: true,
+                                hintText: 'Email',
+                                hintStyle: const TextStyle(color: Colors.black),
+                                labelStyle: const TextStyle(color: Colors.black),
+                                errorText: _userInvalid ? _usernameError : null,
+                            ),
+                          ),
                         ),
 
                         Container(
-                          child: Container(
-                            padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
-                            child: TextFormField(
-                              validator: (value){
-                                RegExp regex = new RegExp(r'^.{6,}$');
-                                if (value!.isEmpty){
-                                  return("Please enter your password");
-                                }
-                                
-                                if (regex.hasMatch(value)){
-                                  return ("Please Enter Valid Password(Min 6 character");
-                                }
-                              },
-                              controller: _passwordController,
-                              style: const TextStyle(color: Colors.grey),
-                              obscureText: true,
-                              decoration: InputDecoration(
-                                fillColor: const Color.fromRGBO(255, 255, 255, 0),
-                                filled: true,
-                                hintText: 'Password',
-                                prefixIcon: const Icon(Icons.lock, color: Colors.black),
-                                hintStyle: const TextStyle(color: Colors.black),
-                                labelStyle: const TextStyle(color: Colors.black),
-                                errorText: _passwordInvalid ? _passwordError : null,
-                                suffixIcon: IconButton(
-                                  icon: Icon(_isObscure ? Icons.visibility : Icons.visibility_off, color: Colors.black,),
-                                  onPressed: (){
-                                    setState(() {
-                                      _isObscure = !_isObscure;
-                                    });
-                                  },
-                                ),
+                          padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
+                          child: TextFormField(
+                            validator: (value){
+                              RegExp regex = RegExp(r'^.{6,}$');
+                              if (value!.isEmpty){
+                                return("Please enter your password");
+                              }
+
+                              if (regex.hasMatch(value)){
+                                return ("Please Enter Valid Password(Min 6 character");
+                              }
+                              return null;
+                            },
+                            controller: _passwordController,
+                            style: const TextStyle(color: Colors.grey),
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              fillColor: const Color.fromRGBO(255, 255, 255, 0),
+                              filled: true,
+                              hintText: 'Password',
+                              prefixIcon: const Icon(Icons.lock, color: Colors.black),
+                              hintStyle: const TextStyle(color: Colors.black),
+                              labelStyle: const TextStyle(color: Colors.black),
+                              errorText: _passwordInvalid ? _passwordError : null,
+                              suffixIcon: IconButton(
+                                icon: Icon(_isObscure ? Icons.visibility : Icons.visibility_off, color: Colors.black,),
+                                onPressed: (){
+                                  setState(() {
+                                    _isObscure = !_isObscure;
+                                  });
+                                },
                               ),
                             ),
                           ),
@@ -145,11 +136,11 @@ class _loginPageState extends State<loginPage> {
                       onPressed: (){
                         onSignInClicked(_userController.text, _passwordController.text, context);
                       },
-                      child: const Text('Login', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
                       style: TextButton.styleFrom(
                         backgroundColor: Colors.red,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
                       ),
+                      child: const Text('Login', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
                     ),
                   ),
                 ],
@@ -184,7 +175,7 @@ class _loginPageState extends State<loginPage> {
                           onPressed: (){
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) =>  ResetPasswordPage())
+                                MaterialPageRoute(builder: (context) =>  const ResetPasswordPage())
                             );
                           },
                           child: const Text('Reset password', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),))
@@ -197,7 +188,7 @@ class _loginPageState extends State<loginPage> {
       );
   }
 
-  void onSignInClicked(String email, String password, BuildContext) async {
+  void onSignInClicked(String email, String password, BuildContext context) async {
     LoginController().signIn(email, password, context);
   }
 
@@ -210,7 +201,7 @@ class _loginPageState extends State<loginPage> {
   }
 
   Widget gotoSignUpPage(BuildContext context){
-    return signUpPage();
+    return const SignUpPage();
   }
 
 

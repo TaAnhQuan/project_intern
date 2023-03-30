@@ -34,95 +34,93 @@ class _PaymentPageState extends State<PaymentPage> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
+              margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
               child: Image.asset('assets/image/credit_card_payment.png'),
             ),
 
             Material(
               elevation: 10,
-              borderRadius: BorderRadius.all(Radius.circular(20)),
+              borderRadius: const BorderRadius.all(Radius.circular(20)),
               child: Container(
                 width: screenWidth * 0.9  ,
                 height: 230,
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.blueAccent),
-                    borderRadius: BorderRadius.all(Radius.circular(20))
+                    borderRadius: const BorderRadius.all(Radius.circular(20))
                 ),
                 child: ListView(
                   children: [
                     Container(
-                      padding: EdgeInsets.all(15),
+                      padding: const EdgeInsets.all(15),
                       child: TextFormField(
                           style: TextStyle(color: Colors.grey.shade300),
                         decoration: InputDecoration(
                           fillColor: Colors.grey.shade300,
                           filled: true,
                           hintText: 'Card Number',
-                          hintStyle: TextStyle(fontSize: 20, color: Colors.grey)
+                          hintStyle: const TextStyle(fontSize: 20, color: Colors.grey)
                         ),
                       ),
                     ),
 
-                    Container(
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 100,
-                            height: 60,
-                            padding: EdgeInsets.all(10),
-                            child: TextFormField(
-                              style: TextStyle(color: Colors.grey.shade300),
-                              decoration: InputDecoration(
-                                  fillColor: Colors.grey.shade300,
-                                  filled: true,
-                                  hintText: 'Day',
-                                  hintStyle: TextStyle(fontSize: 20, color: Colors.grey)
-                              ),
+                    Row(
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 60,
+                          padding: const EdgeInsets.all(10),
+                          child: TextFormField(
+                            style: TextStyle(color: Colors.grey.shade300),
+                            decoration: InputDecoration(
+                                fillColor: Colors.grey.shade300,
+                                filled: true,
+                                hintText: 'Day',
+                                hintStyle: const TextStyle(fontSize: 20, color: Colors.grey)
                             ),
                           ),
+                        ),
 
-                          Container(
-                            width: 120,
-                            height: 60,
-                            padding: EdgeInsets.all(10),
-                            child: TextFormField(
-                              style: TextStyle(color: Colors.grey.shade300),
-                              decoration: InputDecoration(
-                                  fillColor: Colors.grey.shade300,
-                                  filled: true,
-                                  hintText: 'Month',
-                                  hintStyle: TextStyle(fontSize: 20, color: Colors.grey)
-                              ),
+                        Container(
+                          width: 120,
+                          height: 60,
+                          padding: const EdgeInsets.all(10),
+                          child: TextFormField(
+                            style: TextStyle(color: Colors.grey.shade300),
+                            decoration: InputDecoration(
+                                fillColor: Colors.grey.shade300,
+                                filled: true,
+                                hintText: 'Month',
+                                hintStyle: const TextStyle(fontSize: 20, color: Colors.grey)
                             ),
                           ),
+                        ),
 
-                          Container(
-                            width: 120,
-                            height: 60,
-                            padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
-                            child: TextFormField(
-                              style: TextStyle(color: Colors.grey.shade300),
-                              decoration: InputDecoration(
-                                  fillColor: Colors.grey.shade300,
-                                  filled: true,
-                                  hintText: 'Year',
-                                  hintStyle: TextStyle(fontSize: 20, color: Colors.grey)
-                              ),
+                        Container(
+                          width: 120,
+                          height: 60,
+                          padding: const EdgeInsets.fromLTRB(10, 10, 0, 10),
+                          child: TextFormField(
+                            style: TextStyle(color: Colors.grey.shade300),
+                            decoration: InputDecoration(
+                                fillColor: Colors.grey.shade300,
+                                filled: true,
+                                hintText: 'Year',
+                                hintStyle: const TextStyle(fontSize: 20, color: Colors.grey)
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
 
                     Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       child: TextFormField(
                         style: TextStyle(color: Colors.grey.shade300),
                         decoration: InputDecoration(
                             fillColor: Colors.grey.shade300,
                             filled: true,
                             hintText: 'Name On Card',
-                            hintStyle: TextStyle(fontSize: 20, color: Colors.grey)
+                            hintStyle: const TextStyle(fontSize: 20, color: Colors.grey)
                         ),
                       ),
                     ),
@@ -132,7 +130,7 @@ class _PaymentPageState extends State<PaymentPage> {
             ),
 
             Container(
-              margin: EdgeInsets.fromLTRB(10, 100, 10, 10),
+              margin: const EdgeInsets.fromLTRB(10, 100, 10, 10),
 
               child: SizedBox(
                 height: 50,

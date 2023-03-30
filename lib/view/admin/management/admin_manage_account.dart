@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class AdminManageAccount extends StatefulWidget {
@@ -24,57 +25,104 @@ class _AdminManageAccountState extends State<AdminManageAccount> {
         ),
       ),
 
-      body: Container(
-        child: ListView.builder(
-            itemCount: 10,
-            itemBuilder: (BuildContext context, int index){
-              return Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                    width: 1,
+      body: StreamBuilder(
+          stream: FirebaseFirestore.instance
+              .collection('users')
+              .snapshots(),
+        builder: (context, AsyncSnapshot<QuerySnapshot> streamSnapshot) {
+          return ListView.builder(
+              itemCount: streamSnapshot.data?.docs.length,
+              itemBuilder: (BuildContext context, int index){
+                return Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.grey,
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'assets/image/avatar-default.png',
-                      width: 70,
-                      height: 70,
-                    ),
-
-                    Container(
-                      margin: const EdgeInsets.fromLTRB(20, 0, 60, 0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('User $index', style: const TextStyle(color: Colors.black, fontSize: 20),),
-                          Text('Description for user $index', style: const TextStyle(color: Colors.black, fontSize: 16),)
-                        ],
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/image/avatar-default.png',
+                        width: 70,
+                        height: 70,
                       ),
-                    ),
 
-                    Container(
-                      child: Column(
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(20, 0, 55, 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('${streamSnapshot.data?.docs[index]['username']}', style: const TextStyle(color: Colors.black, fontSize: 20),),
+                            Text('Description for \n ${streamSnapshot.data?.docs[index]['username']}', style: const TextStyle(color: Colors.black, fontSize: 16),)
+                          ],
+                        ),
+                      ),
+
+                      Column(
                         children: [
                           TextButton(
-                              onPressed: (){},
-                              child: Text('Update')
+                              onPressed: (){
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context){
+                                      return AlertDialog(
+                                        title: const Text('Account Details'),
+                                        content: Text('${streamSnapshot.data?.docs[index]['username']}'),
+                                        actions: [
+                                          TextButton(
+                                              onPressed: (){},
+                                              child: const Text('Change Password')
+                                          ),
+
+                                          TextButton(
+                                              onPressed: (){
+                                                Navigator.pop(context);
+                                              },
+                                              child: const Text('Back'))
+                                        ],
+                                      );
+                                    }
+                                );
+                              },
+                              child: const Text('Details')
                           ),
 
                           TextButton(
-                              onPressed: (){},
-                              child: Text('Delete')
+                              onPressed: (){
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context){
+                                      return AlertDialog(
+                                        title: const Text('Do you want do delete this account'),
+                                        actions: [
+                                          TextButton(
+                                              onPressed: (){},
+                                              child: const Text('Yes')
+                                          ),
+
+                                          TextButton(
+                                              onPressed: (){
+                                                Navigator.pop(context);
+                                              },
+                                              child: const Text('No')
+                                          ),
+                                        ],
+                                      );
+                                    }
+                                );
+                              },
+                              child: const Text('Delete')
                           ),
                         ],
                       )
-                    )
-                  ],
-                ),
-              );
-            }
-        ),
+                    ],
+                  ),
+                );
+              }
+          );
+        }
       ),
     );
   }

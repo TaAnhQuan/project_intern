@@ -31,11 +31,9 @@ class _ChangeCountryPageState extends State<ChangeCountryPage> {
             itemBuilder: (context, index){
               final country = countries[index];
               return ListTile(
-                title: Container(
-                  child: TextButton(
-                    onPressed: (){},
-                    child: Text(country, style: TextStyle(color: Colors.black, fontSize: 16)),
-                  ),
+                title: TextButton(
+                  onPressed: (){},
+                  child: Text(country, style: const TextStyle(color: Colors.black, fontSize: 16)),
                 )
               );
             }),

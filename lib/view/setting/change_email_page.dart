@@ -11,14 +11,14 @@ class ChangeEmailPage extends StatefulWidget {
 
 class _ChangeEmailPageState extends State<ChangeEmailPage> {
 
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _newEmailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _newEmailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
 
-    bool _isObscure = true;
+    bool isObscure = true;
 
     return Scaffold(
       appBar: AppBar(
@@ -98,30 +98,31 @@ class _ChangeEmailPageState extends State<ChangeEmailPage> {
                 if (regex.hasMatch(value)){
                   return ("Please Enter Valid Password(Min 6 character");
                 }
+                return null;
               },
               controller: _passwordController,
               style: const TextStyle(color: Colors.grey),
-              obscureText: true,
-              decoration: InputDecoration(
+              obscureText: !isObscure,
+              decoration: const InputDecoration(
                 filled: true,
                 hintText: 'Password',
-                prefixIcon: const Icon(Icons.lock, color: Colors.black),
-                hintStyle: const TextStyle(color: Colors.black),
-                labelStyle: const TextStyle(color: Colors.black),
-                suffixIcon: IconButton(
-                  icon: Icon(_isObscure ? Icons.visibility : Icons.visibility_off, color: Colors.black,),
-                  onPressed: (){
-                    setState(() {
-                      _isObscure = !_isObscure;
-                    });
-                  },
-                ),
+                prefixIcon: Icon(Icons.lock, color: Colors.black),
+                hintStyle: TextStyle(color: Colors.black),
+                labelStyle: TextStyle(color: Colors.black),
+                // suffixIcon: IconButton(
+                //   icon: Icon(isObscure ? Icons.visibility : Icons.visibility_off, color: Colors.black,),
+                //   onPressed: (){
+                //     setState(() {
+                //       isObscure = !isObscure;
+                //     });
+                //   },
+                // ),
               ),
             ),
           ),
 
           Container(
-            margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+            margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             child: TextButton(
                 onPressed: (){
                   SettingController().changeEmail(

@@ -47,6 +47,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                 if (regex.hasMatch(value)){
                   return ("Please Enter Valid Password(Min 6 character");
                 }
+                return null;
               },
               controller: _passwordController,
               style: const TextStyle(color: Colors.grey),
@@ -81,6 +82,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                 if (regex.hasMatch(value)){
                   return ("Please Enter Valid Password(Min 6 character");
                 }
+                return null;
               },
               controller: _newPasswordController,
               style: const TextStyle(color: Colors.grey),
@@ -115,6 +117,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                 if (regex.hasMatch(value)){
                   return ("Please Enter Valid Password(Min 6 character");
                 }
+                return null;
               },
               controller: _newPasswordConfirmController,
               style: const TextStyle(color: Colors.grey),
@@ -138,7 +141,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
           ),
 
           Container(
-            margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+            margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             child: TextButton(
                 onPressed: (){
                   SettingController().changePassword(
