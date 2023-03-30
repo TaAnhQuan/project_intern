@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../sizeconfig.dart';
+import '../../../sizeconfig.dart';
 
 
 class IconbtnWithCounter extends StatelessWidget {
@@ -46,7 +46,7 @@ class IconbtnWithCounter extends StatelessWidget {
               border: Border.all(width: 1,color: Colors.white)
             ),
             child: Center(
-              child: Text("$numOfItems",style:  const TextStyle(fontSize: 11
+              child: Text("$numOfItems",style: const TextStyle(fontSize: 11
               ,height: 1, color: Colors.white,
               fontWeight: FontWeight.w600,
               ),

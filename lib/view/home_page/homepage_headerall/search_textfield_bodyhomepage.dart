@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../sizeconfig.dart';
+import '../../../sizeconfig.dart';
 // ignore: camel_case_types
 class search_textfield_bodyhomepage extends StatelessWidget {
   const search_textfield_bodyhomepage({
@@ -10,7 +10,7 @@ class search_textfield_bodyhomepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: SizeConfig.screenWidth*0.6,
+      width: SizeConfig.screenWidth*0.55,
       height: 45,
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 224, 231, 192),

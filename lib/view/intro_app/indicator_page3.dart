@@ -1,7 +1,6 @@
-import 'package:project_intern/view/intro_app/indicator_page1.dart';
 import 'package:flutter/material.dart';
-class Indicatoe_page3 extends StatelessWidget {
-  const Indicatoe_page3({super.key});
+class IndicatotPage3 extends StatelessWidget {
+  const IndicatotPage3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,41 +10,9 @@ class Indicatoe_page3 extends StatelessWidget {
       body: Container(
       height: maxheight*0.8,
       width: maxwitdth,
-      //color: Colors.amber,
-      //   child:  Container( 
-      //       decoration: BoxDecoration(
-      //         gradient: LinearGradient(
-      //           colors:[
-      //             Colors.yellow,
-      //             Colors.red,
-      //             Colors.yellow,
-      //             Colors.red,
-      //           ],
-      //           begin: Alignment.topRight,
-      //           end: Alignment.bottomLeft,
-      //            stops: [       0.4,
-      //                         0.0,
-      //                         0.7,
-      //                         0.6,
-      //                       ],
-      //         //    ),
-      //   //         gradient: LinearGradient(
-      //   //   colors: [
-      //   //     Colors.red,
-      //   //      Colors.yellow,
-      //   //      Colors.black
-      //   //   ],
-      //   //   begin: Alignment(-0.7,12),
-      //   //   end: Alignment(1,-2),
-      //   // ),
-      //   //   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25),bottomRight: Radius.circular(25))
-      //         )
-      //       ) ,
-      //       ),
-      // );
        decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6.0),
-                  gradient: LinearGradient(begin: FractionalOffset.topLeft, end: FractionalOffset.bottomRight, colors: [
+                  gradient: const LinearGradient(begin: FractionalOffset.topLeft, end: FractionalOffset.bottomRight, colors: [
                     //Color.fromARGB(255, 225, 248, 123),
                     Colors.white,
                     Colors.white,
@@ -65,7 +32,7 @@ class Indicatoe_page3 extends StatelessWidget {
      child:  Stack(
        children: [
         ///SizedBox(height: 100,),
-        Container(
+        SizedBox(
           height: maxheight*0.8,
           width: maxwitdth,
           //color: Colors.black,
@@ -81,9 +48,9 @@ class Indicatoe_page3 extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   //color: Colors.amber,
-                  image: new DecorationImage(
+                  image: const DecorationImage(
                                 
-                                image: new ExactAssetImage(
+                                image: ExactAssetImage(
                                     'assets/image/thirdScreen.png',
                                     scale: 1,
                                     
@@ -93,10 +60,7 @@ class Indicatoe_page3 extends StatelessWidget {
                                 fit: BoxFit.contain,
                               ),
                 ),
-                // child: Image.asset("assets/image/picture1.png",
-                //         height: 300,
-                //         width: 300,
-                //         fit: BoxFit.contain,
+              
                         ),
             ],
           ),
@@ -108,9 +72,7 @@ class Indicatoe_page3 extends StatelessWidget {
                  child: Row(children: [
             SizedBox(width: maxwitdth*0.25,),
             Column(
-            children: [
-              //SizedBox(height: maxheight*0.05,),
-              
+            children: const [
               Align(
                 alignment: Alignment.bottomRight,
                 child:Text("Get Any Thing Online",style: TextStyle(color: Color.fromARGB(255, 228, 86, 4),fontSize: 30,  decoration: TextDecoration.none, fontWeight: FontWeight.bold),
@@ -120,19 +82,17 @@ class Indicatoe_page3 extends StatelessWidget {
               child: Text("You can buy anything from digital product",style: TextStyle(color: Colors.orangeAccent,fontSize: 15,  decoration: TextDecoration.none),
               ),),
               Padding(
-                padding: const EdgeInsets.only(left: 100.0),
+                padding: EdgeInsets.only(left: 100.0),
                 child: Align(
                   alignment: Alignment.bottomRight,
                 child:Text("hardware within few clicks",style: TextStyle(color: Colors.orangeAccent,fontSize: 15),
                  ),),
               ),
              ],
-           ),]),
+            )
+           ]),
+          ),
          ),
-         ),
-
-         
-
        ],
      ),)
     );
