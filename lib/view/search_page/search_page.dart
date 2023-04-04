@@ -18,14 +18,11 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
 
-    double _screenHeight = MediaQuery.of(context).size.height;
-    double _screenWidth = MediaQuery.of(context).size.width;
-
     return AppBar(
         backgroundColor: Colors.amber[100],
         elevation: 0,
         toolbarOpacity: 1,
-        title: Text('Search', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),),
+        title: const Text('Search', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),),
         actions: [
           IconButton(
               onPressed: (){
