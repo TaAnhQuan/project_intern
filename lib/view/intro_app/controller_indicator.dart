@@ -31,7 +31,7 @@ class _ControllerIndicator extends State<ControllerIndicator> {
                 child: PageView(
                   onPageChanged: (int index){
                     setState(() {
-                      print(index);
+                      //print(index);
                       if (index<=1){
                         checkpage = true;
                       }
@@ -104,7 +104,7 @@ class _ControllerIndicator extends State<ControllerIndicator> {
                               builder: (context) => const  HomeControllerPage()));
                 },
                 style: ElevatedButton.styleFrom(
-                    primary: const Color.fromARGB(255, 245, 161, 5)),
+                    backgroundColor: const Color.fromARGB(255, 245, 161, 5)),
                 child: Text(
                   checkpage ? "Next" : "Get started",
                   style: const TextStyle(

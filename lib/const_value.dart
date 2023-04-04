@@ -1,3 +1,4 @@
+// ignore: non_constant_identifier_names
 var LIST_COUNTRIES = ['Afghanistan',
   'Albania',
   'Algeria',

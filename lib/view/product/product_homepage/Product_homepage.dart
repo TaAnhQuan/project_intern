@@ -1,6 +1,8 @@
-// ignore: file_names
 
-import '../../../database/flashsale_item.dart';
+
+// ignore_for_file: file_names
+
+import '../../../database/product.dart';
 import '../../../sizeconfig.dart';
 import "package:flutter/material.dart";
 
@@ -55,9 +57,9 @@ class ProductHomepage extends StatelessWidget {
                    alignment: Alignment.center,
                    child: Padding(
                      padding: const EdgeInsets.only(bottom:40),
-                     child: Container(
-                       height: SizeConfig.screenWidth * 0.45-35,
-                      width: SizeConfig.screenWidth * 0.45-35,
+                     child: SizedBox(
+                       height: SizeConfig.screenWidth * 0.45,
+                      width: SizeConfig.screenWidth * 0.45,
                        child: ClipRRect(
                          
                          child: Image.asset(products[i].imageUrl,
@@ -79,8 +81,6 @@ class ProductHomepage extends StatelessWidget {
                      
                      ),
                   ),
-           
-              
                  ]
                  ),
                   
@@ -128,28 +128,37 @@ class ProductHomepage extends StatelessWidget {
                    child: Padding(
                      padding: const EdgeInsets.only(bottom:40,top: 2),
                      child: Container(
-                      height: SizeConfig.screenWidth * 0.45-35,
-                      width: SizeConfig.screenWidth * 0.45-35,
-                       child: ClipRRect(
-                                        child: Image.asset(products[i+1].imageUrl,
-                                        fit: BoxFit.cover,
-                                        ),
-                                      ),
+                      height: SizeConfig.screenWidth * 0.45,
+                      width: SizeConfig.screenWidth * 0.45,
+                      //color: Colors.amber,
+                      decoration: const BoxDecoration(
+                        //borderRadius: BorderRadius.ci(4)
+                      ),
+                       child: ClipRRect(  
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(products[i+1].imageUrl,
+                        fit: BoxFit.cover,
+                        ),
+                      ),
                      ),
                    ),),
                  Align(
-                   alignment: Alignment.bottomCenter,
-                    child: Text.rich(
+
+                   alignment: Alignment.bottomLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Text.rich(
                      TextSpan(text:  '${products[i+1].name}  \n',
-                          style: TextStyle(fontSize: 16,fontWeight:FontWeight.bold ,color: Colors.black,),
+                          style: const TextStyle(fontSize: 16,fontWeight:FontWeight.w400 ,color: Colors.black,),
                          children: [
                            TextSpan(
                              text:"${products[i+1].price1} đ",//${products[i+1].productsold} - ${products[i+1].remainingproduct}" )
-                            style: TextStyle(fontSize: 16,color: Colors.red),
+                            style: const TextStyle(fontSize: 16,color: Colors.red),
                            ),
                          ],                      
                       )
                      ),
+                    ),
                  ),
                  ]),
                ),

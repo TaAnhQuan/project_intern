@@ -53,17 +53,13 @@ class _BodyHomePageState extends State<BodyHomePage>  with TickerProviderStateMi
                       ],
                     ),
                   ),]),
-          Container(
-            // height: SizeConfig.screenHeight*0.2,
-            // width: SizeConfig.screenWidth,
-            child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(0),
-                    vertical: getProportionateScreenHeight(5)
-                  ),
-                  child: const HomeHeader(),
+          Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: getProportionateScreenWidth(0),
+                  vertical: getProportionateScreenHeight(5)
                 ),
-          ),
+                child: const HomeHeader(),
+              ),
             ]
           
         ),

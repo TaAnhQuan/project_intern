@@ -1,6 +1,5 @@
 import 'dart:async';
 import "package:flutter/material.dart";
-import 'package:project_intern/database/flashsale_item.dart';
 import 'package:project_intern/sizeconfig.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
  
@@ -141,7 +140,7 @@ class _Categories_01State extends State<Categories_01> with TickerProviderStateM
           ) ,
          Service(),
          FlashSale(animation: _animation, isVisible: _isVisible),
-          ProductHomepage(),
+          const ProductHomepage(),
         //SizedBox(height: SizeConfig.screenWidth*0.5)
         ],
       ),

@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import 'dart:math' as math;
-import "../../../database/flashsale_item.dart";
+import '../../../database/product.dart';
 import "../../../sizeconfig.dart";
 import "../../categories/categories_01.dart";
 import "../../product/widget/product_detail/product_detail.dart";
