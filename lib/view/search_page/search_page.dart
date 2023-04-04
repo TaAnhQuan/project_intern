@@ -1,5 +1,3 @@
-// ignore_for_file: unused_local_variable
-
 import 'package:flutter/material.dart';
 
 import 'custom_search_delegate.dart';
@@ -18,18 +16,16 @@ class SearchPage extends StatefulWidget with PreferredSizeWidget{
 class _SearchPageState extends State<SearchPage> {
 
   @override
-  // ignore: duplicate_ignore
   Widget build(BuildContext context) {
 
-
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
+    double _screenHeight = MediaQuery.of(context).size.height;
+    double _screenWidth = MediaQuery.of(context).size.width;
 
     return AppBar(
         backgroundColor: Colors.amber[100],
         elevation: 0,
         toolbarOpacity: 1,
-        title: const Text('Search', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),),
+        title: Text('Search', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),),
         actions: [
           IconButton(
               onPressed: (){
