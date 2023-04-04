@@ -37,30 +37,8 @@ class _HomeControllerPage extends State<HomeControllerPage> {
       body:Center(
         child: _widgetOptions.elementAt(_selectedIndex),
         
-      ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: [
-      //       BottomNavigationBarItem(
-      //         icon:Icon(Icons.home,size: 28),
-      //         label: "Trang 1"),
-      //          BottomNavigationBarItem(
-      //         icon:Icon(Icons.album_rounded,size: 28),
-      //         label: "Trang 2"),
-      //          BottomNavigationBarItem(
-      //         icon:Icon(Icons.menu,size: 28),
-      //         label: "Trang 3"),
-      //     ],
-      //     currentIndex: currentindex,
-      //     selectedItemColor: Color.fromARGB(118, 158, 73, 1),
-      //     unselectedItemColor: Color.fromRGBO(131, 129, 129, 1),
-      //     onTap: (int index) {
-      //       setState(() {
-      //          currentindex = index;
-                  
-      //       });
-      //     }, //tr
-      // ),
-            bottomNavigationBar: 
+        ),
+      bottomNavigationBar: 
        Container(
         margin: const  EdgeInsets.all(5),
         //padding: EdgeInsets.all(5),
@@ -105,3 +83,26 @@ class _HomeControllerPage extends State<HomeControllerPage> {
     );
   }
 }
+
+   // bottomNavigationBar: BottomNavigationBar(
+      //   items: [
+      //       BottomNavigationBarItem(
+      //         icon:Icon(Icons.home,size: 28),
+      //         label: "Trang 1"),
+      //          BottomNavigationBarItem(
+      //         icon:Icon(Icons.album_rounded,size: 28),
+      //         label: "Trang 2"),
+      //          BottomNavigationBarItem(
+      //         icon:Icon(Icons.menu,size: 28),
+      //         label: "Trang 3"),
+      //     ],
+      //     currentIndex: currentindex,
+      //     selectedItemColor: Color.fromARGB(118, 158, 73, 1),
+      //     unselectedItemColor: Color.fromRGBO(131, 129, 129, 1),
+      //     onTap: (int index) {
+      //       setState(() {
+      //          currentindex = index;
+                  
+      //       });
+      //     }, //tr
+      // ),

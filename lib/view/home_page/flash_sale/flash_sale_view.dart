@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import "../../../database/flashsale_item.dart";
 import "../../../sizeconfig.dart";
 import "../../categories/categories_01.dart";
+import "../../product/widget/product_detail/product_detail.dart";
 import "infomation_title_flash_sale.dart";
 class FlashSale extends StatelessWidget {
   const FlashSale({
@@ -53,7 +54,8 @@ class FlashSale extends StatelessWidget {
              return GestureDetector(
                //onTap: () => print(index),
                onTap: () {  
-                   print(" ${product.name} : NOI DUNG ${product.content}+ " " +");
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>ProductDetail(product: sortedProducts[index],)) );
+                  // print(" ${product.name} : NOI DUNG ${product.content}+ " " +");
                },
                child: Container(
                  margin: const EdgeInsets.only(top: 15,left: 8,right: 1),

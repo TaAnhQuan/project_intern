@@ -14,6 +14,7 @@ class HomeHeader extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         //color: Colors.amber,
+        
         borderRadius: BorderRadius.circular(10)
       ),
       child: Row(
@@ -34,20 +35,22 @@ class HomeHeader extends StatelessWidget {
               color: const Color.fromARGB(255, 224, 231, 192),
               borderRadius: BorderRadius.circular(10)
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(width: SizeConfig.screenWidth*0.04,),
-                Container(
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 224, 231, 192),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const  Icon(Icons.search)),
-                const  search_textfield_bodyhomepage(),
-              
-                    
-            ],),
+            child: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(width: SizeConfig.screenWidth*0.04,),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 224, 231, 192),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const  Icon(Icons.search)),
+                  const  search_textfield_bodyhomepage(),
+                
+                      
+              ],),
+            ),
           ),
            IconbtnWithCounter(numOfItems: 0,
            svgSrc: "assets/image/icons/cart_icon.svg",press: (){

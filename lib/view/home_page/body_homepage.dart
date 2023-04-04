@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../sizeconfig.dart';
-import 'package:project_intern/view/categories/categories_01.dart';
+import '../categories/categories_01.dart';
 
 import '../categories/categories_02.dart';
 import '../categories/categories_03.dart';
@@ -40,7 +40,7 @@ class _BodyHomePageState extends State<BodyHomePage>  with TickerProviderStateMi
                           height: SizeConfig.screenHeight,
                           width: SizeConfig.screenWidth,
                           decoration: const BoxDecoration(
-                            color: Colors.yellowAccent,
+                            color: Color.fromARGB(255, 248, 248, 140),
                           ),
                           child: TabBarView(
                             controller: tabController,
@@ -53,13 +53,17 @@ class _BodyHomePageState extends State<BodyHomePage>  with TickerProviderStateMi
                       ],
                     ),
                   ),]),
-          Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: getProportionateScreenWidth(0),
-                  vertical: getProportionateScreenHeight(5)
+          Container(
+            // height: SizeConfig.screenHeight*0.2,
+            // width: SizeConfig.screenWidth,
+            child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: getProportionateScreenWidth(0),
+                    vertical: getProportionateScreenHeight(5)
+                  ),
+                  child: const HomeHeader(),
                 ),
-                child: const HomeHeader(),
-              ),
+          ),
             ]
           
         ),

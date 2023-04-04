@@ -16,32 +16,32 @@ class ProductHomepage extends StatelessWidget {
     return Column(
       children: [
         for (int i = 0; i < products.length; i += 2)
-     Row(
-       children: [
-         Expanded(
-           child: InkWell(
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_) =>ProductDetail(content: products[i].content,favorite:products[i].favorite ,price1: products[i].price, price: products[i].price1,remainingproduct: products[i].remainingproduct,)) );
-              // print(" ${products[i].name} : NOI DUNG ${products[i].content}+ " " +");
-               
+          Row(
+            children: [
+              Expanded(
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>ProductDetail(product: products[i],)) );
+                    // print(" ${products[i].name} : NOI DUNG ${products[i].content}+ " " +");
+                    
             },
              child: Container(
-               height: SizeConfig.screenWidth * 0.4,
-               width: SizeConfig.screenWidth * 0.3,
+               height: SizeConfig.screenWidth * 0.5,
+               width: SizeConfig.screenWidth * 0.4,
                margin: const EdgeInsets.all(5),
                decoration: const BoxDecoration(
                   boxShadow: [
                      BoxShadow(
-                      color: Colors.red,
+                      color: Color.fromARGB(255, 243, 188, 37),
                       offset: Offset(
-                        2.0,
-                        2.0,
+                        1.0,
+                        1.0,
                       ),
                       blurRadius: 5.0,
                       spreadRadius: 1.0,
                     ), //
                     BoxShadow(
-                    color: Colors.yellowAccent,
+                    color: Color.fromARGB(255, 248, 248, 245),
                       offset: Offset(0.0, 0.0),
                       blurRadius: 0.0,
                       spreadRadius: 0.0,
@@ -54,10 +54,16 @@ class ProductHomepage extends StatelessWidget {
                  Align(
                    alignment: Alignment.center,
                    child: Padding(
-                     padding: const EdgeInsets.only(bottom:40,top: 2),
-                     child: ClipRRect(
-                       
-                       child: Image.asset(products[i].imageUrl,),
+                     padding: const EdgeInsets.only(bottom:40),
+                     child: Container(
+                       height: SizeConfig.screenWidth * 0.45-35,
+                      width: SizeConfig.screenWidth * 0.45-35,
+                       child: ClipRRect(
+                         
+                         child: Image.asset(products[i].imageUrl,
+                         fit: BoxFit.cover,
+                         ),
+                       ),
                      ),
                    ),
                  ),
@@ -85,20 +91,21 @@ class ProductHomepage extends StatelessWidget {
            Expanded(
              child: InkWell(
               onTap: (){
-                // ignore: avoid_print
-                print(" ${products[i+1].name} : NOI DUNG ${products[i+1].content}+ " " +");
+                
+                //print(" ${products[i+1].name} : NOI DUNG ${products[i+1].content}+ " " +");
+                Navigator.push(context, MaterialPageRoute(builder: (context) =>ProductDetail(product: products[i+1],)) );
               },
                child: Container(
-                 height: SizeConfig.screenWidth * 0.4,
-                 width: SizeConfig.screenWidth * 0.3,
+                 height: SizeConfig.screenWidth * 0.5,
+                 width: SizeConfig.screenWidth * 0.4,
                  margin: const EdgeInsets.all(5),
                  decoration: const BoxDecoration(
                   boxShadow: [
                      BoxShadow(
-                      color: Colors.blue,
+                      color: Color.fromARGB(255, 230, 245, 30),
                       offset: Offset(
-                        2.0,
-                        2.0,
+                        1.0,
+                        1.0,
                       ),
                       blurRadius: 5.0,
                       spreadRadius: 1.0,
@@ -120,17 +127,26 @@ class ProductHomepage extends StatelessWidget {
                    alignment: Alignment.center,
                    child: Padding(
                      padding: const EdgeInsets.only(bottom:40,top: 2),
-                     child: ClipRRect(
-                   child: Image.asset(products[i+1].imageUrl,),
-                 ),
+                     child: Container(
+                      height: SizeConfig.screenWidth * 0.45-35,
+                      width: SizeConfig.screenWidth * 0.45-35,
+                       child: ClipRRect(
+                                        child: Image.asset(products[i+1].imageUrl,
+                                        fit: BoxFit.cover,
+                                        ),
+                                      ),
+                     ),
                    ),),
                  Align(
                    alignment: Alignment.bottomCenter,
                     child: Text.rich(
-                     TextSpan(text:  '${products[i+1].name} - ${products[i+1].price1} \n',
+                     TextSpan(text:  '${products[i+1].name}  \n',
+                          style: TextStyle(fontSize: 16,fontWeight:FontWeight.bold ,color: Colors.black,),
                          children: [
                            TextSpan(
-                             text:"${products[i+1].productsold} - ${products[i+1].remainingproduct}" )
+                             text:"${products[i+1].price1} đ",//${products[i+1].productsold} - ${products[i+1].remainingproduct}" )
+                            style: TextStyle(fontSize: 16,color: Colors.red),
+                           ),
                          ],                      
                       )
                      ),
@@ -145,7 +161,7 @@ class ProductHomepage extends StatelessWidget {
                height: SizeConfig.screenWidth * 0.4,
                width: SizeConfig.screenWidth * 0.3,
                margin: const EdgeInsets.all(5),
-               color: Colors.blue,
+               //color: Colors.blue,
                child: Column(
                  children: const [
 

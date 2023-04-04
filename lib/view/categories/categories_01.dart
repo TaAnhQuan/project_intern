@@ -1,5 +1,6 @@
 import 'dart:async';
 import "package:flutter/material.dart";
+import 'package:project_intern/database/flashsale_item.dart';
 import 'package:project_intern/sizeconfig.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
  
@@ -9,9 +10,9 @@ import '../product/product_homepage/Product_homepage.dart';
 // ignore: camel_case_types
 class Categories_01 extends StatefulWidget {
   const Categories_01({
-    super.key,
+    super.key, 
   });
-
+   
   @override
   State<Categories_01> createState() => _Categories_01State();
 }
@@ -53,8 +54,7 @@ class _Categories_01State extends State<Categories_01> with TickerProviderStateM
     //_animation = Tween<double>(begin: 20, end: 60).animate(_controller);
     _animation = Tween<double>(begin: 0, end: 1).animate(_controller);
     
-   
-  _controller1 = AnimationController(
+    _controller1 = AnimationController(
         duration: const Duration(milliseconds: 500),
         vsync: this,
       )..repeat(reverse: true); 
@@ -71,8 +71,6 @@ class _Categories_01State extends State<Categories_01> with TickerProviderStateM
       );
     }
 
-
-  
   //Tween Animation: Đây là một hoạt ảnh đơn giản cho phép bạn chuyển đổi suôn sẻ 
   //giữa hai giá trị. Ví dụ: bạn có thể sử dụng Tween Animation để làm mờ dần một widget.
     @override
@@ -92,27 +90,16 @@ class _Categories_01State extends State<Categories_01> with TickerProviderStateM
       physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.only(bottom: 200),
       child: Column(
-        
         children: [
           //Cliprect
           Container(
-            
             height: SizeConfig.screenHeight*0.2,
-            //width: SizeConfig.screenWidth,
-           
-          //   margin: EdgeInsets.symmetric(
-          //   horizontal: getProportionateScreenWidth(10),
-          //   vertical: getProportionateScreenHeight(5)
-          // ),
-          decoration: BoxDecoration(
+            decoration: BoxDecoration(
             //color: Colors.amber,
-            borderRadius: BorderRadius.circular(30)
-            
+            borderRadius: BorderRadius.circular(30)  
           ),
           child: Stack(
             children: [
-             
-          
              PageView.builder(
               controller:pageController ,
               itemCount: listOfFeatureContent.length,
@@ -131,12 +118,11 @@ class _Categories_01State extends State<Categories_01> with TickerProviderStateM
                 margin: const EdgeInsets.only(top: 5),
                 child: SmoothPageIndicator(
                   controller:
-                      pageController, //_controller,//_pageViewController,
-                  count: 4,
+                    pageController, //_controller,//_pageViewController,
+                    count: 4,
                   //axisDirection: Axis.vertical,
                   //_controller.nextPage(duration: duration, curve: curve)
                   effect:const WormEffect(
-         
                     spacing:  8.0,
                     radius:  1.0,
                     dotWidth:  10,
@@ -149,15 +135,13 @@ class _Categories_01State extends State<Categories_01> with TickerProviderStateM
                  
                 ),
               ),
-                    ),
-            ),        
-              
-              ]
+              ),
+            ),]
           ),
           ) ,
          Service(),
          FlashSale(animation: _animation, isVisible: _isVisible),
-         const ProductHomepage(),
+          ProductHomepage(),
         //SizedBox(height: SizeConfig.screenWidth*0.5)
         ],
       ),

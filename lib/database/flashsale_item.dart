@@ -35,9 +35,9 @@ class Product {
 
 final List<Product> products = [
   Product(
-    'Product 1',
+    'Car model Blaze',
      100.0, 
-     'assets/image/secondScreen.png' , 
+     'assets/image/toy/car_modelBlaze.jpg' , 
      0.5, 100, 10, 10,0,
      """Lyrics Demons - Imagine Dragons:
         When the days are cold and the cards all fold
@@ -52,7 +52,7 @@ final List<Product> products = [
         This is my kingdom come""",
         false, 4.4
      ),
-  Product('Product 2', 100.0, 'assets/image/secondScreen.png' , 0.6, 100, 15, 20, 0,
+  Product('Đồ chơi khủng long', 100.0, 'assets/image/toy/khunglong.jpg' , 0.6, 100, 15, 20, 0,
      """Lyrics Demons - Imagine Dragons:
         When the days are cold and the cards all fold
         And the saints we see are all made of gold
@@ -66,7 +66,7 @@ final List<Product> products = [
         This is my kingdom come""",
         false, 4.4
      ),
-  Product('Product 3', 100.0, 'assets/image/secondScreen.png' , 0.65,100,  15, 20, 0,
+  Product('Robot Model', 100.0, 'assets/image/toy/model_robot.jpg' , 0.65,100,  15, 20, 0,
      """Lyrics Demons - Imagine Dragons:
         When the days are cold and the cards all fold
         And the saints we see are all made of gold
@@ -77,7 +77,7 @@ final List<Product> products = [
        This is my kingdom come""",
         false, 4.4
      ),
-  Product('Product 4', 100.0, 'assets/image/secondScreen.png' , 0.3,100,  15, 20, 0,
+  Product('Product 4', 100.0, 'assets/image/toy/sungdochoi.jpg' , 0.3,100,  15, 20, 0,
      """Lyrics Demons - Imagine Dragons:
         When the days are cold and the cards all fold
         And the saints we see are all made of gold
@@ -92,7 +92,7 @@ final List<Product> products = [
        This is my kingdom come""",
         false, 4.4
      ),
-  Product('Product 6', 30.0, 'assets/image/secondScreen.png'  , 0.1, 100, 15, 20, 0,
+  Product('Product 6', 30.0, 'assets/image/toy/sungdochoi.jpg' , 0.1, 100, 15, 20, 0,
      """Lyrics Demons - Imagine Dragons:
         When the days are cold and the cards all fold
         And the saints we see are all made of gold
@@ -112,7 +112,7 @@ final List<Product> products = [
       This is my kingdom come""",
         false, 4.4
      ),
-  Product('Product 8', 20.0, 'assets/image/secondScreen.png'  , 0.2, 100, 15, 20, 0,
+  Product('Sung', 20.0, 'assets/image/toy/sungdochoi.jpg'  , 0.2, 100, 15, 20, 0,
      """Lyrics Demons - Imagine Dragons:
        This is my kingdom come""",
         false, 4.4
