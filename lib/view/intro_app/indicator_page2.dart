@@ -1,8 +1,8 @@
-import 'package:project_intern/view/intro_app/indicator_page1.dart';
+
 import "package:project_intern/view/home_page/home_page.dart";
 import 'package:flutter/material.dart';
-class Indicatoe_page2 extends StatelessWidget {
-  const Indicatoe_page2({super.key});
+class IndicatotPage2 extends StatelessWidget {
+  const IndicatotPage2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class Indicatoe_page2 extends StatelessWidget {
       // );
        decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6.0),
-                  gradient: LinearGradient(begin: FractionalOffset.topLeft, end: FractionalOffset.bottomRight, colors: [
+                  gradient: const LinearGradient(begin: FractionalOffset.topLeft, end: FractionalOffset.bottomRight, colors: [
                     //Color.fromARGB(255, 225, 248, 123),
                     Colors.white,
                     Colors.white,
@@ -70,7 +70,7 @@ class Indicatoe_page2 extends StatelessWidget {
         Align(
           alignment: Alignment.topRight,
           child: Padding(
-                padding: EdgeInsets.only(top: 50),
+                padding: const EdgeInsets.only(top: 50),
                 child: SizedBox(
                   height: 50,
                   width: 90,
@@ -96,16 +96,16 @@ class Indicatoe_page2 extends StatelessWidget {
                         height: 35,
                         width: 85,
                         child: ElevatedButton(onPressed: (){
-                                Navigator.push(context,MaterialPageRoute(builder: (context)=> HomePage()));
+                                Navigator.push(context,MaterialPageRoute(builder: (context)=> const HomePage()));
 
                         }, 
                         style: ElevatedButton.styleFrom(
                            
-                          backgroundColor: Color.fromARGB(0, 230, 10, 10),
+                          backgroundColor: const Color.fromARGB(0, 230, 10, 10),
                           
                         ),
                         child: Row(
-                        children: [Text(  "Skip",
+                        children: const [Text(  "Skip",
                             style: TextStyle(
                                 
                                 color: Color.fromRGBO(37, 36, 36, 0.8),
@@ -123,7 +123,7 @@ class Indicatoe_page2 extends StatelessWidget {
                 ),
               ),
         ),
-        Container(
+        SizedBox(
           height: maxheight*0.8,
           width: maxwitdth,
           //color: Colors.black,
@@ -139,9 +139,9 @@ class Indicatoe_page2 extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   //color: Colors.amber,
-                  image: new DecorationImage(
+                  image: const DecorationImage(
 
-                                image: new ExactAssetImage(
+                                image:  ExactAssetImage(
                                     'assets/image/firstScreen.png',
                                     scale: 1
                                     
@@ -165,7 +165,7 @@ class Indicatoe_page2 extends StatelessWidget {
                  child: Row(children: [
             SizedBox(width: maxwitdth*0.25,),
             Column(
-            children: [
+            children: const   [
               //SizedBox(height: maxheight*0.05,),
               
               Align(
@@ -177,7 +177,7 @@ class Indicatoe_page2 extends StatelessWidget {
               child: Text("You can buy anything from digital product",style: TextStyle(color: Colors.orangeAccent,fontSize: 15,  decoration: TextDecoration.none),
               ),),
               Padding(
-                padding: const EdgeInsets.only(left: 100.0),
+                padding: EdgeInsets.only(left: 100.0),
                 child: Align(
                   alignment: Alignment.bottomRight,
                 child:Text("hardware within few clicks",style: TextStyle(color: Colors.orangeAccent,fontSize: 15),

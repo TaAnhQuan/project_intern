@@ -18,6 +18,7 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
 
+
     return AppBar(
         backgroundColor: Colors.amber[100],
         elevation: 0,

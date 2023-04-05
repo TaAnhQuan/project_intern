@@ -1,8 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:project_intern/view/home_page/search_textfield_bodyhomepage.dart';
-
-import '../../sizeconfig.dart';
+import 'package:project_intern/view/home_page/homepage_headerall/search_textfield_bodyhomepage.dart';
+import '../../../sizeconfig.dart';
 import 'icon_btn_withcounter.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -15,13 +14,25 @@ class HomeHeader extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         //color: Colors.amber,
+        
         borderRadius: BorderRadius.circular(10)
       ),
       child: Row(
         children: [
-          Container(
+          SizedBox(
+            width: 45,
+            height: 45,
+            child: TextButton(onPressed:(){
+            }, child:Image.asset(
+              "assets/image/icons/scan.png",
+              height: 45,width: 45,
+              fit: BoxFit.fill,
+            ) ,
+            ),
+          ),
+          Container(  
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 224, 231, 192),
+              color: const Color.fromARGB(255, 224, 231, 192),
               borderRadius: BorderRadius.circular(10)
             ),
             child: Row(
@@ -30,13 +41,11 @@ class HomeHeader extends StatelessWidget {
                 SizedBox(width: SizeConfig.screenWidth*0.04,),
                 Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 224, 231, 192),
+                    color: const Color.fromARGB(255, 224, 231, 192),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Icon(Icons.search)),
-                search_textfield_bodyhomepage(),
-              
-                    
+                  child: const  Icon(Icons.search)),
+                const  search_textfield_bodyhomepage(),    
             ],),
           ),
            IconbtnWithCounter(numOfItems: 0,

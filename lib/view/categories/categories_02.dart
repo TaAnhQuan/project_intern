@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: camel_case_types
 class Categories_02 extends StatelessWidget {
   const Categories_02({
     super.key,
@@ -8,6 +9,6 @@ class Categories_02 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.yellow,
-      child: Text("2"));
+      child: const Text("2"));
   }
 }
