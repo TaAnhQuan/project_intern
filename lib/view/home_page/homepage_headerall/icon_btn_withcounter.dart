@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../sizeconfig.dart';
 
-class IconbtnWithCounter extends StatelessWidget {
-  const IconbtnWithCounter(
+class IconBtnWithCounter extends StatelessWidget {
+  const IconBtnWithCounter(
       {super.key,
       this.numOfItems = 0,
       required this.press,

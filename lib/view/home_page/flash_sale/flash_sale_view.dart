@@ -127,7 +127,7 @@ class FlashSale extends StatelessWidget {
                   );
                 }),
           ),
-          InfomationTitleFlashSale(animation: _animation),
+          InformationTitleFlashSale(animation: _animation),
           AnimationLinghtFlashSale(
               isVisible: _isVisible, animation: _animation),
         ],

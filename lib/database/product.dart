@@ -4,11 +4,11 @@ class Product {
   final String imageUrl;
   final double price1;
   final double multiplier;
-  final int productnumber;
-  final int productsold;
-  final int addproduct;
-  final int deletenumberproduct;
-  final int remainingproduct; // sp con lai
+  final int productNumber;
+  final int productSold;
+  final int addProduct;
+  final int deleteNumberProduct;
+  final int remainingProduct; // sp con lai
   final String content;
   bool favorite;
 
@@ -21,16 +21,16 @@ class Product {
       this.price,
       this.imageUrl,
       this.multiplier,
-      this.productnumber,
-      this.productsold,
-      this.addproduct,
-      this.deletenumberproduct,
+      this.productNumber,
+      this.productSold,
+      this.addProduct,
+      this.deleteNumberProduct,
       this.content,
       this.favorite,
       this.rating)
       : price1 = price * (1 - multiplier),
-        remainingproduct =
-            productnumber - productsold - deletenumberproduct + addproduct;
+        remainingProduct =
+            productNumber - productSold - deleteNumberProduct + addProduct;
 }
 
 final List<Product> products = [

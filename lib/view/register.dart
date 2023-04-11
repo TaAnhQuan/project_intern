@@ -38,7 +38,7 @@ class _RegisterState extends State<Register> {
                   fontWeight: FontWeight.bold),
             ),
             const Text(
-              "Creat your new account for future uses.",
+              "Create your new account for future uses.",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,

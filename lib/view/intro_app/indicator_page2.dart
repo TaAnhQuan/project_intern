@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import "package:project_intern/view/home_page/home_page.dart";
 
-class IndicatotPage2 extends StatelessWidget {
-  const IndicatotPage2({super.key});
+class IndicatorPage2 extends StatelessWidget {
+  const IndicatorPage2({super.key});
 
   @override
   Widget build(BuildContext context) {
-    double maxwitdth = MediaQuery.of(context).size.width;
-    double maxheight = MediaQuery.of(context).size.height;
+    double maxWidth = MediaQuery.of(context).size.width;
+    double maxHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         body: Container(
-      height: maxheight * 0.8,
-      width: maxwitdth,
+      height: maxHeight * 0.8,
+      width: maxWidth,
       //color: Colors.amber,
       //   child:  Container(
       //       decoration: BoxDecoration(
@@ -132,18 +132,18 @@ class IndicatotPage2 extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: maxheight * 0.8,
-            width: maxwitdth,
+            height: maxHeight * 0.8,
+            width: maxWidth,
             //color: Colors.black,
 
             child: Column(
               children: [
                 SizedBox(
-                  height: maxheight * 0.3,
+                  height: maxHeight * 0.3,
                 ),
                 Container(
-                  height: maxwitdth * 0.7,
-                  width: maxwitdth * 0.7,
+                  height: maxWidth * 0.7,
+                  width: maxWidth * 0.7,
 
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
@@ -163,12 +163,12 @@ class IndicatotPage2 extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: maxheight * 0.7),
+            padding: EdgeInsets.only(top: maxHeight * 0.7),
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Row(children: [
                 SizedBox(
-                  width: maxwitdth * 0.25,
+                  width: maxWidth * 0.25,
                 ),
                 Column(
                   children: const [

@@ -11,7 +11,7 @@ class HomeControllerPage extends StatefulWidget {
 
 class _HomeControllerPage extends State<HomeControllerPage> {
   int _selectedIndex = 0;
-  int currentindex = 0;
+  int currentIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static final List<Widget> _widgetOptions = <Widget>[

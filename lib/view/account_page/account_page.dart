@@ -101,7 +101,7 @@ class AccountPage extends StatelessWidget {
                     ],
                   ),
 
-                  /** Column for display payment method image button and texxt */
+                  /** Column for display payment method image button and text */
                   Column(
                     children: [
                       /** Container for display payment image button */

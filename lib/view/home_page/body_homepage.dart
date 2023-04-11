@@ -79,12 +79,12 @@ class ControllerBodyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Tabbar cua man Home cac the loai
-    return TabbarHomePage(tabController: tabController);
+    return TabBarHomePage(tabController: tabController);
   }
 }
 
-class TabbarHomePage extends StatelessWidget {
-  const TabbarHomePage({
+class TabBarHomePage extends StatelessWidget {
+  const TabBarHomePage({
     super.key,
     required this.tabController,
   });

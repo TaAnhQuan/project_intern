@@ -13,14 +13,14 @@ class ControllerIndicator extends StatefulWidget {
 }
 
 class _ControllerIndicator extends State<ControllerIndicator> {
-  bool checkpage = true;
+  bool checkPage = true;
   int pageIndex = 0;
   final PageController _pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
-    double maxwitdth = MediaQuery.of(context).size.width;
-    double maxheight = MediaQuery.of(context).size.height;
+    double maxWidth = MediaQuery.of(context).size.width;
+    double maxHeight = MediaQuery.of(context).size.height;
     return Container(
       color: Colors.white,
       child: Column(
@@ -28,31 +28,31 @@ class _ControllerIndicator extends State<ControllerIndicator> {
           Stack(
             children: [
               SizedBox(
-                height: maxheight * 0.8,
-                width: maxwitdth,
+                height: maxHeight * 0.8,
+                width: maxWidth,
                 child: PageView(
                   onPageChanged: (int index) {
                     setState(() {
                       //print(index);
                       if (index <= 1) {
-                        checkpage = true;
+                        checkPage = true;
                       } else {
-                        checkpage = false;
+                        checkPage = false;
                       }
                       pageIndex = index;
                     });
                   },
                   controller: _pageController,
                   children: const <Widget>[
-                    IndicatotPage1(),
-                    IndicatotPage2(),
-                    IndicatotPage3(),
+                    IndicatorPage1(),
+                    IndicatorPage2(),
+                    IndicatorPage3(),
                   ],
                 ),
               ),
               SizedBox(
-                height: maxheight * 0.82,
-                width: maxwitdth,
+                height: maxHeight * 0.82,
+                width: maxWidth,
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
@@ -84,13 +84,13 @@ class _ControllerIndicator extends State<ControllerIndicator> {
               ),
               Center(
                 child: Padding(
-                  padding: EdgeInsets.only(top: maxheight * 0.9),
+                  padding: EdgeInsets.only(top: maxHeight * 0.9),
                   child: SizedBox(
                       height: 45,
                       width: 130,
                       child: ElevatedButton(
                         onPressed: () {
-                          checkpage
+                          checkPage
                               ? _pageController.nextPage(
                                   duration: const Duration(milliseconds: 500),
                                   curve: Curves.bounceInOut)
@@ -104,7 +104,7 @@ class _ControllerIndicator extends State<ControllerIndicator> {
                             backgroundColor:
                                 const Color.fromARGB(255, 245, 161, 5)),
                         child: Text(
-                          checkpage ? "Next" : "Get started",
+                          checkPage ? "Next" : "Get started",
                           style: const TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,

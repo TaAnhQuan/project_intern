@@ -28,15 +28,15 @@ class _SplashScreenIntroState extends State<SplashScreenIntro> {
   //final PageController _pageController = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
-    double maxwitdth = MediaQuery.of(context).size.width;
-    double maxheight = MediaQuery.of(context).size.height;
+    double maxWidth = MediaQuery.of(context).size.width;
+    double maxHeight = MediaQuery.of(context).size.height;
     return Container(
       color: Colors.white,
       child: Column(
         children: [
           Container(
-            height: maxheight,
-            width: maxwitdth,
+            height: maxHeight,
+            width: maxWidth,
             color: Colors.amber,
             child: Stack(
               children: const [

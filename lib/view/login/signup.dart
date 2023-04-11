@@ -257,16 +257,16 @@ class _SignUpPageState extends State<SignUpPage> {
     FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
     User? user = _auth.currentUser;
 
-    UserAccount useracc = UserAccount.fromUser();
+    UserAccount userAcc = UserAccount.fromUser();
 
-    useracc.username = _userController.text;
-    useracc.id = user!.uid;
-    useracc.password = _passwordController.text;
+    userAcc.username = _userController.text;
+    userAcc.id = user!.uid;
+    userAcc.password = _passwordController.text;
 
     await firebaseFirestore
         .collection("users")
         .doc(user.uid)
-        .set(useracc.toMap());
+        .set(userAcc.toMap());
 
     Fluttertoast.showToast(msg: "Account created successfully :) ");
     // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const SplashScreenIntro()));

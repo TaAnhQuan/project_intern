@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../sizeconfig.dart';
 
 // ignore: camel_case_types
-class search_textfield_bodyhomepage extends StatelessWidget {
-  const search_textfield_bodyhomepage({
+class searchTextFieldBodyHomePage extends StatelessWidget {
+  const searchTextFieldBodyHomePage({
     super.key,
   });
 

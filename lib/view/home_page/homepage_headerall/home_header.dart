@@ -47,15 +47,15 @@ class HomeHeader extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: const Icon(Icons.search)),
-                const search_textfield_bodyhomepage(),
+                const searchTextFieldBodyHomePage(),
               ],
             ),
           ),
-          IconbtnWithCounter(
+          IconBtnWithCounter(
               numOfItems: 0,
               svgSrc: "assets/image/icons/cart_icon.svg",
               press: () {}),
-          IconbtnWithCounter(
+          IconBtnWithCounter(
               numOfItems: 2,
               svgSrc: "assets/image/icons/Bell.svg",
               press: () {}),

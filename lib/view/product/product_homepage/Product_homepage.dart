@@ -149,7 +149,7 @@ class ProductHomepage extends StatelessWidget {
                                               children: [
                                                 TextSpan(
                                                     text:
-                                                        "${products[i].remainingproduct}+",
+                                                        "${products[i].remainingProduct}+",
                                                     style: const TextStyle(
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -297,7 +297,7 @@ class ProductHomepage extends StatelessWidget {
                                                 children: [
                                                   TextSpan(
                                                       text:
-                                                          "${products[i + 1].remainingproduct}+",
+                                                          "${products[i + 1].remainingProduct}+",
                                                       style: const TextStyle(
                                                           fontWeight:
                                                               FontWeight.w500,

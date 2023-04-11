@@ -2,8 +2,8 @@ import "package:flutter/material.dart";
 
 import "../../../sizeconfig.dart";
 
-class AnimationLinghtFlashSale extends StatelessWidget {
-  const AnimationLinghtFlashSale({
+class AnimationLightingFlashSale extends StatelessWidget {
+  const AnimationLightingFlashSale({
     super.key,
     required bool isVisible,
     required Animation<double> animation,
