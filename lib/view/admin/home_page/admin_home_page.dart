@@ -15,7 +15,6 @@ class AdminHomePage extends StatefulWidget {
 class _AdminHomePageState extends State<AdminHomePage> {
   @override
   Widget build(BuildContext context) {
-
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
@@ -28,56 +27,65 @@ class _AdminHomePageState extends State<AdminHomePage> {
               children: [
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 20, screenWidth * 0.6, 10),
-                  child: const Text('Managing', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
+                  child: const Text('Managing',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
                 ),
-
                 ButtonBar(
                   alignment: MainAxisAlignment.start,
                   children: [
-                    const ImageIcon(AssetImage('assets/image/icons/user-manage-icon.png')),
-
+                    const ImageIcon(
+                        AssetImage('assets/image/icons/user-manage-icon.png')),
                     TextButton(
-                      onPressed: (){
+                      onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const AdminManageAccount()),
+                          MaterialPageRoute(
+                              builder: (context) => const AdminManageAccount()),
                         );
                       },
                       child: SizedBox(
                           width: screenWidth * 0.7,
-                          child: Text('Account Managing', style: TextStyle(color: Colors.grey.shade700, fontSize: 16),)
-                      ),
+                          child: Text(
+                            'Account Managing',
+                            style: TextStyle(
+                                color: Colors.grey.shade700, fontSize: 16),
+                          )),
                     ),
                   ],
                 ),
-
                 ButtonBar(
                   alignment: MainAxisAlignment.start,
                   children: [
-                    const ImageIcon(AssetImage('assets/image/icons/package.png')),
-
+                    const ImageIcon(
+                        AssetImage('assets/image/icons/package.png')),
                     TextButton(
-                      onPressed: (){
+                      onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const AdminManageItem()),
+                          MaterialPageRoute(
+                              builder: (context) => const AdminManageItem()),
                         );
                       },
                       child: SizedBox(
                           width: screenWidth * 0.7,
-                          child: Text('Manage Store Item', style: TextStyle(color: Colors.grey.shade700, fontSize: 16),)
-                      ),
+                          child: Text(
+                            'Manage Store Item',
+                            style: TextStyle(
+                                color: Colors.grey.shade700, fontSize: 16),
+                          )),
                     ),
                   ],
                 ),
-
                 ButtonBar(
                   alignment: MainAxisAlignment.start,
                   children: [
-                    ImageIcon(const AssetImage('assets/image/icons/truck.png'), color: Colors.grey.shade700,),
-
+                    ImageIcon(
+                      const AssetImage('assets/image/icons/truck.png'),
+                      color: Colors.grey.shade700,
+                    ),
                     TextButton(
-                      onPressed: (){
+                      onPressed: () {
                         // Navigator.push(
                         //   context,
                         //   MaterialPageRoute(builder: (context) => const LegalPage()),
@@ -85,40 +93,43 @@ class _AdminHomePageState extends State<AdminHomePage> {
                       },
                       child: SizedBox(
                           width: screenWidth * 0.7,
-                          child: Text('Manage Shipping', style: TextStyle(color: Colors.grey.shade700, fontSize: 16),)
-                      ),
+                          child: Text(
+                            'Manage Shipping',
+                            style: TextStyle(
+                                color: Colors.grey.shade700, fontSize: 16),
+                          )),
                     ),
                   ],
                 ),
-
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 20, screenWidth * 0.6, 10),
-                  child: const Text('Account', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  child: const Text(
+                    'Account',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ),
-
                 ButtonBar(
                   alignment: MainAxisAlignment.start,
                   children: [
                     const Icon(Icons.logout),
-
                     TextButton(
-                      onPressed: (){
+                      onPressed: () {
                         SettingController().signOut();
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) =>  const LoginPage())
-                        );
+                            MaterialPageRoute(
+                                builder: (context) => const LoginPage()));
                       },
                       child: SizedBox(
                           width: screenWidth * 0.7,
-                          child: Text('SignOut', style: TextStyle(color: Colors.grey.shade700, fontSize: 16),)
-                      ),
+                          child: Text(
+                            'SignOut',
+                            style: TextStyle(
+                                color: Colors.grey.shade700, fontSize: 16),
+                          )),
                     ),
-
                   ],
                 ),
-
               ],
             )
           ],

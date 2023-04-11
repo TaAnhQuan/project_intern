@@ -11,53 +11,56 @@ class ChangeLanguagePage extends StatefulWidget {
 class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
   @override
   Widget build(BuildContext context) {
-
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Language', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.grey.shade700),),
+        title: Text(
+          'Language',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade700),
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.of(context).pop();
           },
           icon: const Icon(Icons.arrow_back_ios_rounded),
           color: Colors.grey.shade700,
         ),
       ),
-
       body: Column(
         children: [
           ButtonBar(
             children: [
-
-              CircleFlag('us', size: 30,),
-
+              CircleFlag(
+                'us',
+                size: 30,
+              ),
               TextButton(
-                  onPressed: (){},
+                  onPressed: () {},
                   child: SizedBox(
                       width: screenWidth * 0.8,
                       child: const Text(
-                          'English',
+                        'English',
                         style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ))
-              ),
+                            fontSize: 25,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ))),
             ],
           ),
-
           ButtonBar(
             children: [
-
-              CircleFlag('vn', size: 30,),
-
+              CircleFlag(
+                'vn',
+                size: 30,
+              ),
               TextButton(
-                  onPressed: (){},
+                  onPressed: () {},
                   child: SizedBox(
                       width: screenWidth * 0.8,
                       child: const Text(
@@ -65,10 +68,8 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
                         style: TextStyle(
                             fontSize: 25,
                             color: Colors.black,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ))
-              ),
+                            fontWeight: FontWeight.bold),
+                      ))),
             ],
           )
         ],
