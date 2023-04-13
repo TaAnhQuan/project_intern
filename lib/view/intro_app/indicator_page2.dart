@@ -12,38 +12,6 @@ class IndicatotPage2 extends StatelessWidget {
       body: Container(
       height: maxheight*0.8,
       width: maxwitdth,
-      //color: Colors.amber,
-      //   child:  Container( 
-      //       decoration: BoxDecoration(
-      //         gradient: LinearGradient(
-      //           colors:[
-      //             Colors.yellow,
-      //             Colors.red,
-      //             Colors.yellow,
-      //             Colors.red,
-      //           ],
-      //           begin: Alignment.topRight,
-      //           end: Alignment.bottomLeft,
-      //            stops: [       0.4,
-      //                         0.0,
-      //                         0.7,
-      //                         0.6,
-      //                       ],
-      //         //    ),
-      //   //         gradient: LinearGradient(
-      //   //   colors: [
-      //   //     Colors.red,
-      //   //      Colors.yellow,
-      //   //      Colors.black
-      //   //   ],
-      //   //   begin: Alignment(-0.7,12),
-      //   //   end: Alignment(1,-2),
-      //   // ),
-      //   //   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25),bottomRight: Radius.circular(25))
-      //         )
-      //       ) ,
-      //       ),
-      // );
        decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6.0),
                   gradient: const LinearGradient(begin: FractionalOffset.topLeft, end: FractionalOffset.bottomRight, colors: [
@@ -76,28 +44,11 @@ class IndicatotPage2 extends StatelessWidget {
                   width: 90,
                   child: Row(
                     children: [
-                      // TextButton(
-                      //   onPressed: () {
-                      //     // Navigator.push(
-                      //     //     context,
-                      //     //     MaterialPageRoute(
-                      //     //         builder: (context) => Controller_option()));
-                      //   },
-                      //   child: const Text(
-                      //     "Skip",
-                      //     style: TextStyle(
-                      //         color: Color.fromRGBO(37, 36, 36, 0.8),
-                      //         fontSize: 20,
-                      //         fontFamily: "Poppins"),
-                      //   ),
-                      // ),
-                      // Icon(Icons.navigate_next_sharp)
                       SizedBox(
                         height: 35,
                         width: 85,
                         child: ElevatedButton(onPressed: (){
                                 Navigator.push(context,MaterialPageRoute(builder: (context)=> const HomePage()));
-
                         }, 
                         style: ElevatedButton.styleFrom(
                            
@@ -112,7 +63,7 @@ class IndicatotPage2 extends StatelessWidget {
                                 fontSize: 16,
                                 fontFamily: "Poppins"),),
                                 Icon(Icons.navigate_next_sharp, size: 20,)
-                                
+                
                                 ],
                         ),
                         
@@ -127,28 +78,25 @@ class IndicatotPage2 extends StatelessWidget {
           height: maxheight*0.8,
           width: maxwitdth,
           //color: Colors.black,
-        
           child: Column(
             children: [
               SizedBox(height: maxheight*0.3,),
               Container(
-                
-                 height: maxwitdth*0.7,
+                height: maxwitdth*0.7,
                 width: maxwitdth*0.7,
-                
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   //color: Colors.amber,
                   image: const DecorationImage(
 
-                                image:  ExactAssetImage(
-                                    'assets/image/firstScreen.png',
-                                    scale: 1
-                                    
-                                    ),
-                                    
-                                fit: BoxFit.contain,
-                              ),
+                    image:  ExactAssetImage(
+                        'assets/image/firstScreen.png',
+                        scale: 1
+                        
+                        ),
+                        
+                    fit: BoxFit.contain,
+                  ),
                 ),
                 // child: Image.asset("assets/image/picture1.png",
                 //         height: 300,
@@ -195,3 +143,54 @@ class IndicatotPage2 extends StatelessWidget {
     );
   }
 }
+
+
+//color: Colors.amber,
+      //   child:  Container( 
+      //       decoration: BoxDecoration(
+      //         gradient: LinearGradient(
+      //           colors:[
+      //             Colors.yellow,
+      //             Colors.red,
+      //             Colors.yellow,
+      //             Colors.red,
+      //           ],
+      //           begin: Alignment.topRight,
+      //           end: Alignment.bottomLeft,
+      //            stops: [       0.4,
+      //                         0.0,
+      //                         0.7,
+      //                         0.6,
+      //                       ],
+      //         //    ),
+      //   //         gradient: LinearGradient(
+      //   //   colors: [
+      //   //     Colors.red,
+      //   //      Colors.yellow,
+      //   //      Colors.black
+      //   //   ],
+      //   //   begin: Alignment(-0.7,12),
+      //   //   end: Alignment(1,-2),
+      //   // ),
+      //   //   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25),bottomRight: Radius.circular(25))
+      //         )
+      //       ) ,
+      //       ),
+      // );
+
+       // TextButton(
+                      //   onPressed: () {
+                      //     // Navigator.push(
+                      //     //     context,
+                      //     //     MaterialPageRoute(
+                      //     //         builder: (context) => Controller_option()));
+                      //   },
+                      //   child: const Text(
+                      //     "Skip",
+                      //     style: TextStyle(
+                      //         color: Color.fromRGBO(37, 36, 36, 0.8),
+                      //         fontSize: 20,
+                      //         fontFamily: "Poppins"),
+                      //   ),
+                      // ),
+                      // Icon(Icons.navigate_next_sharp)

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:project_intern/view/account_page/account_page.dart';
 import 'package:project_intern/view/admin/home_page/admin_home_page.dart';
+import 'package:project_intern/view/intro_app/splashscreen.dart';
 
 class LoginController{
 
@@ -27,7 +28,7 @@ class LoginController{
           password: password,
         ).then((_) {
           Fluttertoast.showToast(msg: "Login successful");
-          Navigator.of(value).pushReplacement(MaterialPageRoute(builder: (context) => const AccountPage()));
+          Navigator.of(value).pushReplacement(MaterialPageRoute(builder: (context) => const SplashScreenIntro()));///AccountPage()));
         });
       }
     });
