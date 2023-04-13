@@ -11,32 +11,37 @@ class ChangeCountryPage extends StatefulWidget {
 class _ChangeCountryPageState extends State<ChangeCountryPage> {
   @override
   Widget build(BuildContext context) {
-
     var countries = LIST_COUNTRIES;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Countries', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.grey.shade700),),
+        title: Text(
+          'Countries',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade700),
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.of(context).pop();
           },
           icon: const Icon(Icons.arrow_back_ios_rounded),
           color: Colors.grey.shade700,
         ),
       ),
-        body: ListView.builder(
-            itemCount: countries.length,
-            itemBuilder: (context, index){
-              final country = countries[index];
-              return ListTile(
+      body: ListView.builder(
+          itemCount: countries.length,
+          itemBuilder: (context, index) {
+            final country = countries[index];
+            return ListTile(
                 title: TextButton(
-                  onPressed: (){},
-                  child: Text(country, style: const TextStyle(color: Colors.black, fontSize: 16)),
-                )
-              );
-            }),
+              onPressed: () {},
+              child: Text(country,
+                  style: const TextStyle(color: Colors.black, fontSize: 16)),
+            ));
+          }),
     );
   }
 }

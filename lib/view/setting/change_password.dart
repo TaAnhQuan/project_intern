@@ -10,41 +10,45 @@ class ChangePasswordPage extends StatefulWidget {
 }
 
 class _ChangePasswordPageState extends State<ChangePasswordPage> {
-
   bool _isObscure = true;
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _newPasswordController = TextEditingController();
-  final TextEditingController _newPasswordConfirmController = TextEditingController();
+  final TextEditingController _newPasswordConfirmController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-        title: Text('Change Password', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.grey.shade700),),
+        title: Text(
+          'Change Password',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade700),
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.of(context).pop();
           },
           icon: const Icon(Icons.arrow_back_ios_rounded),
           color: Colors.grey.shade700,
         ),
       ),
-
       body: ListView(
         children: [
           Container(
             margin: const EdgeInsets.fromLTRB(20, 20, 20, 10),
             child: TextFormField(
-              validator: (value){
+              validator: (value) {
                 RegExp regex = RegExp(r'^.{6,}$');
-                if (value!.isEmpty){
-                  return("Please enter your password");
+                if (value!.isEmpty) {
+                  return ("Please enter your password");
                 }
 
-                if (regex.hasMatch(value)){
+                if (regex.hasMatch(value)) {
                   return ("Please Enter Valid Password(Min 6 character");
                 }
                 return null;
@@ -59,8 +63,11 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                 hintStyle: const TextStyle(color: Colors.black),
                 labelStyle: const TextStyle(color: Colors.black),
                 suffixIcon: IconButton(
-                  icon: Icon(_isObscure ? Icons.visibility : Icons.visibility_off, color: Colors.black,),
-                  onPressed: (){
+                  icon: Icon(
+                    _isObscure ? Icons.visibility : Icons.visibility_off,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
                     setState(() {
                       _isObscure = !_isObscure;
                     });
@@ -69,17 +76,16 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               ),
             ),
           ),
-
           Container(
             margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             child: TextFormField(
-              validator: (value){
+              validator: (value) {
                 RegExp regex = RegExp(r'^.{6,}$');
-                if (value!.isEmpty){
-                  return("Please enter your password");
+                if (value!.isEmpty) {
+                  return ("Please enter your password");
                 }
 
-                if (regex.hasMatch(value)){
+                if (regex.hasMatch(value)) {
                   return ("Please Enter Valid Password(Min 6 character");
                 }
                 return null;
@@ -94,8 +100,11 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                 hintStyle: const TextStyle(color: Colors.black),
                 labelStyle: const TextStyle(color: Colors.black),
                 suffixIcon: IconButton(
-                  icon: Icon(_isObscure ? Icons.visibility : Icons.visibility_off, color: Colors.black,),
-                  onPressed: (){
+                  icon: Icon(
+                    _isObscure ? Icons.visibility : Icons.visibility_off,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
                     setState(() {
                       _isObscure = !_isObscure;
                     });
@@ -104,17 +113,16 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               ),
             ),
           ),
-
           Container(
             margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             child: TextFormField(
-              validator: (value){
+              validator: (value) {
                 RegExp regex = RegExp(r'^.{6,}$');
-                if (value!.isEmpty){
-                  return("Please enter your password");
+                if (value!.isEmpty) {
+                  return ("Please enter your password");
                 }
 
-                if (regex.hasMatch(value)){
+                if (regex.hasMatch(value)) {
                   return ("Please Enter Valid Password(Min 6 character");
                 }
                 return null;
@@ -129,8 +137,11 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                 hintStyle: const TextStyle(color: Colors.black),
                 labelStyle: const TextStyle(color: Colors.black),
                 suffixIcon: IconButton(
-                  icon: Icon(_isObscure ? Icons.visibility : Icons.visibility_off, color: Colors.black,),
-                  onPressed: (){
+                  icon: Icon(
+                    _isObscure ? Icons.visibility : Icons.visibility_off,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
                     setState(() {
                       _isObscure = !_isObscure;
                     });
@@ -139,11 +150,10 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               ),
             ),
           ),
-
           Container(
             margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             child: TextButton(
-                onPressed: (){
+                onPressed: () {
                   SettingController().changePassword(
                       _passwordController.text,
                       _newPasswordController.text,
@@ -151,8 +161,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   Fluttertoast.showToast(msg: "Change password successful");
                   Navigator.of(context).pop();
                 },
-                child: const Text('Change Password')
-            ),
+                child: const Text('Change Password')),
           ),
         ],
       ),

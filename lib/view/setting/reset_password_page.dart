@@ -12,22 +12,25 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Reset Password', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.grey.shade700),),
+        title: Text(
+          'Reset Password',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade700),
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.of(context).pop();
           },
           icon: const Icon(Icons.arrow_back_ios_rounded),
           color: Colors.grey.shade700,
         ),
       ),
-
       body: Center(
-        child: TextFormField(
-
-        ),
+        child: TextFormField(),
       ),
     );
   }

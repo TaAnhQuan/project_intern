@@ -1,5 +1,6 @@
 // ignore: non_constant_identifier_names
-var LIST_COUNTRIES = ['Afghanistan',
+var LIST_COUNTRIES = [
+  'Afghanistan',
   'Albania',
   'Algeria',
   'Andorra',
@@ -196,4 +197,5 @@ var LIST_COUNTRIES = ['Afghanistan',
   'Vietnam',
   'Yemen',
   'Zambia',
-  'Zimbabwe'];
+  'Zimbabwe'
+];

@@ -1,13 +1,13 @@
-
-import "package:project_intern/view/home_page/home_page.dart";
 import 'package:flutter/material.dart';
-class IndicatotPage2 extends StatelessWidget {
-  const IndicatotPage2({super.key});
+import "package:project_intern/view/home_page/home_page.dart";
+
+class IndicatorPage2 extends StatelessWidget {
+  const IndicatorPage2({super.key});
 
   @override
   Widget build(BuildContext context) {
-     double maxwitdth = MediaQuery.of(context).size.width; 
-    double maxheight = MediaQuery.of(context).size.height;
+    double maxWidth = MediaQuery.of(context).size.width;
+    double maxHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
       height: maxheight*0.8,
@@ -51,20 +51,22 @@ class IndicatotPage2 extends StatelessWidget {
                                 Navigator.push(context,MaterialPageRoute(builder: (context)=> const HomePage()));
                         }, 
                         style: ElevatedButton.styleFrom(
-                           
                           backgroundColor: const Color.fromARGB(0, 230, 10, 10),
-                          
                         ),
                         child: Row(
-                        children: const [Text(  "Skip",
-                            style: TextStyle(
-                                
-                                color: Color.fromRGBO(37, 36, 36, 0.8),
-                                fontSize: 16,
-                                fontFamily: "Poppins"),),
-                                Icon(Icons.navigate_next_sharp, size: 20,)
-                
-                                ],
+                          children: const [
+                            Text(
+                              "Skip",
+                              style: TextStyle(
+                                  color: Color.fromRGBO(37, 36, 36, 0.8),
+                                  fontSize: 16,
+                                  fontFamily: "Poppins"),
+                            ),
+                            Icon(
+                              Icons.navigate_next_sharp,
+                              size: 20,
+                            )
+                          ],
                         ),
                         
                         ),
@@ -78,25 +80,28 @@ class IndicatotPage2 extends StatelessWidget {
           height: maxheight*0.8,
           width: maxwitdth,
           //color: Colors.black,
+        
           child: Column(
             children: [
               SizedBox(height: maxheight*0.3,),
               Container(
-                height: maxwitdth*0.7,
+                
+                 height: maxwitdth*0.7,
                 width: maxwitdth*0.7,
+                
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   //color: Colors.amber,
                   image: const DecorationImage(
 
-                    image:  ExactAssetImage(
-                        'assets/image/firstScreen.png',
-                        scale: 1
-                        
-                        ),
-                        
-                    fit: BoxFit.contain,
-                  ),
+                                image:  ExactAssetImage(
+                                    'assets/image/firstScreen.png',
+                                    scale: 1
+                                    
+                                    ),
+                                    
+                                fit: BoxFit.contain,
+                              ),
                 ),
                 // child: Image.asset("assets/image/picture1.png",
                 //         height: 300,

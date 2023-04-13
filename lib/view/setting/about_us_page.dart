@@ -12,19 +12,25 @@ class _AboutUsPageState extends State<AboutUsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('About Us', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.grey.shade700),),
+        title: Text(
+          'About Us',
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade700),
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.of(context).pop();
           },
           icon: const Icon(Icons.arrow_back_ios_rounded),
           color: Colors.grey.shade700,
         ),
       ),
-
-      body: const Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+      body: const Text(
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
           'Suspendisse ac lacinia velit, ac sollicitudin eros. Sed nec eleifend enim. '
           'Vestibulum vel orci vel mi efficitur varius. '
           'Nam vitae purus in arcu suscipit pharetra sed non quam. '
