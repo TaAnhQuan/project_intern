@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:project_intern/controller/admin_page_controller.dart';
 
 class AdminManageAccount extends StatefulWidget {
   const AdminManageAccount({Key? key}) : super(key: key);
@@ -105,7 +106,13 @@ class _AdminManageAccountState extends State<AdminManageAccount> {
                                               'Do you want do delete this account'),
                                           actions: [
                                             TextButton(
-                                                onPressed: () {},
+
+                                                onPressed: () {
+                                                  var uid = streamSnapshot.data?.docs[index].id;
+                                                  AdminPageController().deleteUser(uid!);
+                                                  Navigator.pop(context);
+                                                },
+
                                                 child: const Text('Yes')),
                                             TextButton(
                                                 onPressed: () {
