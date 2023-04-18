@@ -106,11 +106,13 @@ class _AdminManageAccountState extends State<AdminManageAccount> {
                                               'Do you want do delete this account'),
                                           actions: [
                                             TextButton(
+
                                                 onPressed: () {
                                                   var uid = streamSnapshot.data?.docs[index].id;
                                                   AdminPageController().deleteUser(uid!);
                                                   Navigator.pop(context);
                                                 },
+
                                                 child: const Text('Yes')),
                                             TextButton(
                                                 onPressed: () {
